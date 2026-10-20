@@ -39,7 +39,7 @@ The original photograph and raw research evidence remain private.
 - **Offline Android packaging:** the new phone Image was packed with the
   exact private template, then its Android/AVB hashes and preserved ramdisk
   were checked by the retained parser. This was not a flash or device test.
-- **Temporary I/O:** all five managed RAM runs completed cleanup, as did both
+- **Temporary I/O:** all six managed RAM runs completed cleanup, as did both
   unique public Orb tmpfs stages. Raw host paths/logs and generated binaries
   remain excluded from Git.
 
@@ -57,3 +57,12 @@ Generated full logs/provenance and local test artifacts are under ignored
 `build/`. They are not a public binary release or a backup of the original
 research archive. Public checkout/link/content checks are publication checks,
 not additional firmware execution evidence.
+
+## Standalone checkout check
+
+A fresh local clone of the initial public source commit loaded all seven
+command-line tools and their imports, with the expected pinned EDK2 gitlink.
+It contained no private inputs, build outputs or old milestone directories.
+[Checkout result](checkout-smoke.json). This verifies source packaging and CLI
+dependency closure; it did not initialize or rebuild EDK2 again, execute QEMU
+or boot a phone.

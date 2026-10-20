@@ -88,6 +88,12 @@
       "exit_code": 0,
       "cleanup": "complete",
       "swap_out_delta_bytes": 0
+    },
+    {
+      "run": "checkout-smoke-ram",
+      "exit_code": 0,
+      "cleanup": "complete",
+      "swap_out_delta_bytes": 0
     }
   ],
   "physical_evidence": {
@@ -108,5 +114,6 @@
   ],
   "final_qualified": false,
   "original_private_worktree_modified": false,
-  "fresh_clone_full_firmware_build_performed": false
+  "fresh_clone_full_firmware_build_performed": false,
+  "fresh_clone_CLI_imports_and_help_passed": true
 }
