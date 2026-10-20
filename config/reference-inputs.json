@@ -1,0 +1,94 @@
+{
+  "schema": 1,
+  "baseline": "SEC68 final phone platform/wrapper dev2",
+  "edk2_commit": "870158586f14dbf9d57e312ea6ea87141a1b0699",
+  "boot_inputs": {
+    "windows": {
+      "filename": "bootaa64.efi",
+      "bytes": 2622896,
+      "sha256": "a6a54c95f5d1c393553737ffeb00bd83e30f4b5b727111a047b878e7d4ef95f1"
+    },
+    "bcd": {
+      "filename": "BCD",
+      "bytes": 16384,
+      "sha256": "91b58da5c1209c669face3b5373cf3184ee7cda8226c3bf111a47d74a838486f"
+    },
+    "font": {
+      "filename": "wgl4_boot.ttf",
+      "bytes": 50004,
+      "sha256": "6c32f0cbf870cacee03391651e001f01ab6f915a087732b896dea0384f8b94e4"
+    },
+    "segoe": {
+      "filename": "segoe_slboot.ttf",
+      "bytes": 102920,
+      "sha256": "e94b650d9ad7cd610870b2d2e23a2c2f4bb99c3cb61169d768d1447081cee42e"
+    },
+    "segmono": {
+      "filename": "segmono_boot.ttf",
+      "bytes": 45892,
+      "sha256": "42df39308f70c3945d5f630f0ec0bb71234c690e7a7c8171ef062113190eac7c"
+    }
+  },
+  "system": {
+    "image_bytes": 1073741824,
+    "image_sha256": "b03eceb4e12a59167a950c53900fde3c56bc02c6abe4c6ec81f0539cbdc1c0cd",
+    "seal_manifest_sha256": "3e43ad325a6ac856957a82aa2e89b111302b38614cdb51add454da8911c908e1",
+    "seal": {
+      "algorithm": "SHA256",
+      "chunk_bytes": 131072,
+      "chunk_count": 8192,
+      "table_path": "system-block-sha256.bin",
+      "table_bytes": 262144,
+      "table_sha256": "4344f3018f0db4e0e24edd44ca6b687d8761707d0e3f0f87e69a2745e5571825",
+      "index": "volume byte offset / 131072",
+      "chunk_scope": "exact complete chunk, including unused FAT space"
+    },
+    "artifacts": {
+      "SystemVolumeSeal.h": {
+        "path": "SystemVolumeSeal.h",
+        "bytes": 1929,
+        "sha256": "66a34f8bdf29262b092366f3a5b3d43e41aeb36d69f85acd5d2be920ba6426ec"
+      },
+      "SystemVolumeSealData.inc": {
+        "path": "SystemVolumeSealData.inc",
+        "bytes": 1622187,
+        "sha256": "42818d08e2aa09cfb6405ac05e8d116cf9415a413161549dc184bfb739b0b362"
+      },
+      "system-block-sha256.bin": {
+        "path": "system-block-sha256.bin",
+        "bytes": 262144,
+        "sha256": "4344f3018f0db4e0e24edd44ca6b687d8761707d0e3f0f87e69a2745e5571825"
+      }
+    },
+    "full_files": {
+      "boot/boot.sdi": {
+        "bytes": 3170304,
+        "sha256": "cd2c00ce027687ce4a8bdc967f26a8ab82f651c9becd703658ba282ec49702bd"
+      },
+      "sources/boot.wim": {
+        "bytes": 940090097,
+        "sha256": "eb3f3d81c3019ae173748016aaa2b7fc036ff21c930436c00cd1376902e0f73d"
+      }
+    },
+    "physical_gpt": {
+      "lun": 0,
+      "partition_number": 26,
+      "name": "system",
+      "type_guid": "EBD0A0A2-B9E5-4433-87C0-68B6B72699C7",
+      "unique_guid": "52444E41-494F-2044-7379-7374656D0000",
+      "block_bytes": 4096,
+      "start_lba": 96768,
+      "block_count": 1582080,
+      "bytes": 6480199680
+    },
+    "historical_manifest_unique_guid": "52444E41-494E-2044-7379-7374656D0000",
+    "header_sha256": {
+      "sdi": "b53aefb0ff42b8dbe2494a77ffc130d4de74660db3665947739e0bb28a0b72fc",
+      "wim": "b82529d6619867a9aa08fdf7cdfe0b3398d2ba6afe2e4e1b1941377f43a17206"
+    }
+  },
+  "boot_template": {
+    "bytes": 57671680,
+    "sha256": "778df78d3d831fce33096c497b21287a74fb925336e8635d8aa5ee5408aa8424"
+  }
+}

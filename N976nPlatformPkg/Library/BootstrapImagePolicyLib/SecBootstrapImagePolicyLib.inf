@@ -1,0 +1,24 @@
+## SPDX-License-Identifier: MIT
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = SecBootstrapImagePolicyLib
+  FILE_GUID = 6fe97f00-9ce7-4828-9238-4e19b10a67f9
+  MODULE_TYPE = BASE
+  VERSION_STRING = 1.0
+  LIBRARY_CLASS = PeCoffExtraActionLib|SEC
+[Sources]
+  BootstrapImagePolicy.c
+[Packages]
+  MdePkg/MdePkg.dec
+  UefiCpuPkg/UefiCpuPkg.dec
+  N976nPlatformPkg/N976nPlatformPkg.dec
+[LibraryClasses]
+  BaseLib
+  BaseMemoryLib
+  CacheMaintenanceLib
+  ArmMmuLib
+  HobLib
+  DebugLib
+
+[Guids]
+  gN976nPlatformHandoffGuid

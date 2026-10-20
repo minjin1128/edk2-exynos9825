@@ -1,0 +1,97 @@
+## SPDX-License-Identifier: MIT
+## Explicit 9MiB uncompressed firmware container; independent of runtime heap.
+[FV.DXE]
+  BlockSize = 0x1000
+  NumBlocks = 0x900
+  FvAlignment = 4K
+  ERASE_POLARITY = 1
+  MEMORY_MAPPED = TRUE
+  STICKY_WRITE = TRUE
+  LOCK_CAP = TRUE
+  LOCK_STATUS = TRUE
+  WRITE_DISABLED_CAP = TRUE
+  WRITE_ENABLED_CAP = FALSE
+  WRITE_STATUS = FALSE
+  READ_ENABLED_CAP = TRUE
+  READ_STATUS = TRUE
+
+  INF MdeModulePkg/Core/Dxe/DxeMain.inf
+  INF ArmPkg/Drivers/CpuDxe/CpuDxe.inf
+  INF ArmPkg/Drivers/ArmGicDxe/ArmGicV2Dxe.inf
+  INF ArmPkg/Drivers/TimerDxe/TimerDxe.inf
+  INF MdeModulePkg/Core/RuntimeDxe/RuntimeDxe.inf
+  INF MdeModulePkg/Universal/SecurityStubDxe/SecurityStubDxe.inf
+  INF MdeModulePkg/Universal/Metronome/Metronome.inf
+  INF MdeModulePkg/Universal/ResetSystemRuntimeDxe/ResetSystemRuntimeDxe.inf
+  INF EmbeddedPkg/RealTimeClockRuntimeDxe/RealTimeClockRuntimeDxe.inf
+  INF MdeModulePkg/Universal/WatchdogTimerDxe/WatchdogTimer.inf
+  INF MdeModulePkg/Universal/CapsuleRuntimeDxe/CapsuleRuntimeDxe.inf
+  INF MdeModulePkg/Universal/MonotonicCounterRuntimeDxe/MonotonicCounterRuntimeDxe.inf
+  INF MdeModulePkg/Universal/Variable/RuntimeDxe/VariableRuntimeDxe.inf
+  INF MdeModulePkg/Universal/Acpi/AcpiTableDxe/AcpiTableDxe.inf
+  INF MdeModulePkg/Universal/HiiDatabaseDxe/HiiDatabaseDxe.inf
+  INF MdeModulePkg/Universal/Console/ConPlatformDxe/ConPlatformDxe.inf
+  INF MdeModulePkg/Universal/Console/ConSplitterDxe/ConSplitterDxe.inf
+  INF MdeModulePkg/Universal/Console/GraphicsConsoleDxe/GraphicsConsoleDxe.inf
+  INF MdeModulePkg/Universal/Disk/DiskIoDxe/DiskIoDxe.inf
+  INF MdeModulePkg/Universal/Disk/PartitionDxe/PartitionDxe.inf
+  INF MdeModulePkg/Universal/Disk/UnicodeCollation/EnglishDxe/EnglishDxe.inf
+  INF FatPkg/EnhancedFatDxe/Fat.inf
+  INF MdeModulePkg/Universal/FvSimpleFileSystemDxe/FvSimpleFileSystemDxe.inf
+  INF N976nPlatformPkg/Drivers/N976nGopDxe/N976nGopDxe.inf
+  INF N976nPlatformPkg/Drivers/N976nBootMediaDxe/N976nBootMediaDxe.inf
+  INF MdeModulePkg/Universal/BdsDxe/BdsDxe.inf
+  INF N976nPlatformPkg/Applications/N976nBootTest/N976nBootTest.inf
+
+  FILE FREEFORM = f904cc73-d2c6-4798-83ac-7cba37c24401 {
+    SECTION RAW = N976nPlatformPkg/Applications/N976nBootTest/BootInfo.txt
+    SECTION UI = "BootInfo.txt"
+  }
+
+  # Unchanged Microsoft binary catalog source; only BDS explicitly loads it.
+  FILE APPLICATION = 6e5c45af-ef14-4637-a71b-e2815d9b4502 {
+    SECTION ALIGN = 4K PE32 = N976nPlatformPkg/BootMedia/WindowsBootManager.efi
+    SECTION UI = "WindowsBootManager"
+  }
+  FILE FREEFORM = 6e5c45af-ef14-4637-a71b-e2815d9b4503 {
+    SECTION RAW = N976nPlatformPkg/BootMedia/BootMedia.fat
+    SECTION UI = "BootMedia.fat"
+  }
+
+[Rule.Common.DXE_CORE]
+  FILE DXE_CORE = $(NAMED_GUID) {
+    PE32 PE32 Align = 4K $(INF_OUTPUT)/$(MODULE_NAME).efi
+    UI STRING="$(MODULE_NAME)" Optional
+    VERSION STRING="$(INF_VERSION)" Optional BUILD_NUM=$(BUILD_NUMBER)
+  }
+
+[Rule.Common.DXE_DRIVER]
+  FILE DRIVER = $(NAMED_GUID) {
+    DXE_DEPEX DXE_DEPEX $(INF_OUTPUT)/$(MODULE_NAME).depex
+    PE32 PE32 Align = 4K $(INF_OUTPUT)/$(MODULE_NAME).efi
+    UI STRING="$(MODULE_NAME)" Optional
+    VERSION STRING="$(INF_VERSION)" Optional BUILD_NUM=$(BUILD_NUMBER)
+  }
+
+[Rule.Common.DXE_RUNTIME_DRIVER]
+  FILE DRIVER = $(NAMED_GUID) {
+    DXE_DEPEX DXE_DEPEX $(INF_OUTPUT)/$(MODULE_NAME).depex
+    PE32 PE32 Align = 4K $(INF_OUTPUT)/$(MODULE_NAME).efi
+    UI STRING="$(MODULE_NAME)" Optional
+    VERSION STRING="$(INF_VERSION)" Optional BUILD_NUM=$(BUILD_NUMBER)
+  }
+
+[Rule.Common.UEFI_DRIVER]
+  FILE DRIVER = $(NAMED_GUID) {
+    DXE_DEPEX DXE_DEPEX Optional $(INF_OUTPUT)/$(MODULE_NAME).depex
+    PE32 PE32 Align = 4K $(INF_OUTPUT)/$(MODULE_NAME).efi
+    UI STRING="$(MODULE_NAME)" Optional
+    VERSION STRING="$(INF_VERSION)" Optional BUILD_NUM=$(BUILD_NUMBER)
+  }
+
+[Rule.Common.UEFI_APPLICATION]
+  FILE APPLICATION = $(NAMED_GUID) {
+    PE32 PE32 Align = 4K $(INF_OUTPUT)/$(MODULE_NAME).efi
+    UI STRING="$(MODULE_NAME)" Optional
+    VERSION STRING="$(INF_VERSION)" Optional BUILD_NUM=$(BUILD_NUMBER)
+  }

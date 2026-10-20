@@ -1,0 +1,39 @@
+edk2-exynos9825 — SM-N976N source snapshot
+=========================================
+
+Original N976N project source and public extraction tools: MIT (LICENSE).
+Files carrying a different SPDX identifier/copyright retain their terms.
+
+TianoCore EDK2 — pinned actual build dependency
+https://github.com/tianocore/edk2
+870158586f14dbf9d57e312ea6ea87141a1b0699
+License.txt and file-level notices govern the upstream tree. The local
+UpstreamDiskIo/UpstreamFat copies retain BSD-2-Clause-Patent headers.
+A copy of the upstream top-level license is in LICENSES/EDK2.txt.
+
+Mbed TLS — vendored SHA256 sources and their required headers
+N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/
+Existing Apache-2.0 OR GPL-2.0-or-later SPDX expressions and complete LICENSE
+are retained in that directory; they are not covered by the root MIT grant.
+
+NTDEV / exynos9810-woa — primary platform reference
+https://github.com/ntdevlabs/exynos9810-woa
+6e2cacf15f6b99b198ed12ad242da69eb2259bac
+Its license and wider reference-project NOTICE are preserved in LICENSES/.
+This acknowledgment does not mean all components named in that upstream
+NOTICE, including Windows drivers and installer packages, are included here.
+
+Project Silicium / Mu-Silicium — Samsung platform and SEC structure reference
+https://github.com/Project-Silicium/Mu-Silicium
+3ec9169f308c01030a7e698072aca5acb2c0a144
+Original source references remain in the framebuffer/SEC code comments.
+
+ilyatbn / exynos-woa — comparison reference, not the NTDEV source
+https://github.com/ilyatbn/exynos-woa
+13481b4a0b2a92e9efdb56348d7a08ecee495bf8
+
+Samsung open-source platform/runtime DT information informed the N976N
+adaptation. No proprietary Samsung/Lineage/Windows input files, fonts, FAT
+volumes, firmware images, phone backups or raw hardware photographs are
+redistributed. Names and trademarks identify the target and upstream work;
+this project is not affiliated with or endorsed by the named vendors.

@@ -1,0 +1,112 @@
+{
+  "schema": 1,
+  "date": "2026-10-20",
+  "timezone": "Asia/Seoul",
+  "kind": "Public SEC68 extraction checks, distinct from original hardware evidence",
+  "source_equivalence": {
+    "package_files_identical_excluding_overview_README": 98,
+    "entry_files_identical": 4,
+    "pure_helper_functions_AST_equivalent": 12,
+    "NX_overlay_preserved": true,
+    "runtime_code_changed": false
+  },
+  "host_tests": {
+    "methods_passed": 8,
+    "scope": "Pinned inputs; changed GUID/geometry/file/artifact declarations; bounds; symlinks; golden reference header digest; invalid PE/ELF refusal"
+  },
+  "profiles": {
+    "phone": {
+      "build_passed": true,
+      "build_static_seconds": 110.206,
+      "raw_image_bytes": 9629696,
+      "FV_bytes": 9437184,
+      "FV_normal_passed": true,
+      "FV_corruption_cases_passed": 30,
+      "PE_ELF_audit_passed": true,
+      "firmware_executed": false,
+      "hardware_verified": false,
+      "input_manifest_kind": "retained-reference"
+    },
+    "qemu": {
+      "build_passed": true,
+      "build_static_seconds": 127.248,
+      "raw_image_bytes": 9629696,
+      "FV_bytes": 9437184,
+      "FV_normal_passed": true,
+      "FV_corruption_cases_passed": 30,
+      "PE_ELF_audit_passed": true,
+      "firmware_executed": false,
+      "hardware_verified": false,
+      "input_manifest_kind": "public-preparation"
+    }
+  },
+  "seal_preparation": {
+    "full_reference_image_read_passes": 1,
+    "source_bytes_read": 1073741824,
+    "whole_image_sha256_verified": true,
+    "all_three_generated_artifact_identities_match": true,
+    "source_volume_copied": false,
+    "source_volume_modified": false,
+    "full_hash_repeated_per_build": false,
+    "public_manifest_and_preserved_manifest_admitted": true
+  },
+  "offline_Android_package": {
+    "passed": true,
+    "exact_supported_private_template": true,
+    "Android_header_AVB_hash_and_preserved_ramdisk_readback": true,
+    "phone_accessed": false,
+    "hardware_verified": false,
+    "binary_published": false
+  },
+  "managed_RAM_runs": [
+    {
+      "run": "input-tests-ram",
+      "exit_code": 0,
+      "cleanup": "complete",
+      "swap_out_delta_bytes": 0
+    },
+    {
+      "run": "phone-build-ram",
+      "exit_code": 0,
+      "cleanup": "complete",
+      "swap_out_delta_bytes": 0
+    },
+    {
+      "run": "qemu-build-ram",
+      "exit_code": 0,
+      "cleanup": "complete",
+      "swap_out_delta_bytes": 0
+    },
+    {
+      "run": "boot-package-ram",
+      "exit_code": 0,
+      "cleanup": "complete",
+      "swap_out_delta_bytes": 0
+    },
+    {
+      "run": "seal-preparation-ram",
+      "exit_code": 0,
+      "cleanup": "complete",
+      "swap_out_delta_bytes": 0
+    }
+  ],
+  "physical_evidence": {
+    "baseline": "Original SEC68 final phone platform/wrapper dev2; deployment label n976n-sec68-dev1",
+    "original_observation_date": "2026-10-20",
+    "original_WinPE_user_mode_and_GUI_confirmed": true,
+    "basis": "User-confirmed phone desktop observation and privately retained photograph; no exact entry-PC telemetry",
+    "public_rebuild_physical_test_performed": false,
+    "raw_photo_published": false
+  },
+  "omitted": [
+    "New QEMU execution or Windows replay",
+    "Physical flash/boot/input tests of public rebuild",
+    "Comprehensive historical regression and whole-bank cell testing",
+    "Different ISO/WIM or device support",
+    "Native Linux build validation",
+    "SystemReady compliance/certification"
+  ],
+  "final_qualified": false,
+  "original_private_worktree_modified": false,
+  "fresh_clone_full_firmware_build_performed": false
+}

@@ -1,0 +1,49 @@
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = N976nPhoneSec
+  FILE_GUID = 7da5a0f3-1417-4ea1-b8d3-4cfd3cf64343
+  MODULE_TYPE = SEC
+  VERSION_STRING = 0.1
+  ENTRY_POINT = _ModuleEntryPoint
+[Sources]
+  PhoneSec.c
+  DisplayGate.c
+  UfsAdmission.c
+  PowerAdmission.c
+  HighRamAdmission.c
+  AcpiAdmission.c
+  LegacyMemory/MemoryPlan.c
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  EmbeddedPkg/EmbeddedPkg.dec
+  ArmPkg/ArmPkg.dec
+  UefiCpuPkg/UefiCpuPkg.dec
+  N976nPlatformPkg/N976nPlatformPkg.dec
+[LibraryClasses]
+  BaseLib
+  BaseMemoryLib
+  IoLib
+  DebugLib
+  ArmLib
+  ArmMmuLib
+  CacheMaintenanceLib
+  HobLib
+  MemoryAllocationLib
+  PrePiLib
+  PrePiHobListPointerLib
+  ExtractGuidedSectionLib
+  PeCoffLib
+  PrintLib
+  SerialPortLib
+[Guids]
+  gN976nPlatformHandoffGuid
+  gN976nFramebufferHobGuid
+  gN976nUfsAdmissionGuid
+  gN976nHighRamAdmissionGuid
+  gN976nPowerAdmissionGuid
+  gN976nAcpiAdmissionGuid
+[FixedPcd]
+  gN976nPlatformTokenSpaceGuid.PcdN976nPlatformProfile
+[BuildOptions]
+  *_*_*_CC_FLAGS = -DN976N_EDK2_MODULE=1

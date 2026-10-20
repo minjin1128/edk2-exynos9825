@@ -1,0 +1,229 @@
+Windows on the Galaxy S9+ (Exynos 9810)
+=======================================
+
+This project would not exist without the following work. It reuses code, and
+follows designs, from the projects below; their authors are credited here and
+the license texts this requires are reproduced at the end of this file. Our
+thanks to them and their communities.
+
+TianoCore / EDK2
+  The UEFI firmware is built on EDK2 (https://github.com/tianocore/edk2),
+  BSD-2-Clause-Patent. The Platform and Silicon packages here were written for
+  this device, with the parts credited below adapted from other ports.
+
+Project Silicium — Mu-Silicium (https://github.com/Project-Silicium/Mu-Silicium)
+  Robotix22, N1kroks, halal-beef, Arminas Keršys and the Project Silicium
+  contributors. BSD-2-Clause; individual files carry their own licenses.
+  - Windows boot: the CNTFRQ_EL0 workaround Windows needs to boot on this SoC.
+    firmware/Platform/Star2LtePkg/Library/PlatformBootManagerLib/MuCntfrqKep.c
+    carries Mu-Silicium's Samsung CNTFRQ_EL0 shellcode unchanged
+    (Silicon/Samsung/SamsungPkg/Library/ErrataPatchesLib/ShellCode.h at commit
+    d5b3e9ebe74dc175c3c103c0966f8d245d38728e, Robotix22 and N1kroks) and the
+    winload patch targets of its KernelErrataPatcherLib (Winload.h, Robotix22).
+    MIT: Copyright (c) 2021 Samuel Tulach, Copyright (c) 2022-2023 DuoWoA
+    authors, Copyright (c) 2026 Project Silicium (license text below).
+  - Memory: firmware/Platform/Star2LtePkg/Drivers/Star2LteRamManagerDxe follows
+    Mu-Silicium's RamManagerDxe (SiliciumPkg, Robotix22; Copyright (c) The Linux
+    Foundation, Copyright (c) Sunflower2333): publishing the DRAM banks outside the
+    PEI window from DXE with AddMemorySpace and the matching attributes. The
+    memory-layout notes in Star2LtePkg.dsc compare against its RamManagerLib.
+  - Its Exynos 9810 support (the exynos-refactor work) and its "Allow Windows
+    Boot" path were the reference for how this firmware starts Windows
+    (Star2LteAcpiPlatformDxe, PlatformBootManagerLib), and its Silicium-ACPI
+    compiler is the iasl the build scripts use.
+
+Renegade Project — edk2-msm (https://github.com/edk2-porting/edk2-msm), and
+edk2-exynos (https://github.com/sonic011gamer/edk2-exynos)
+  firmware/tools/bootshim/bootshim.S is adapted from tools/BootShim/BootShim.S
+  of edk2-msm (Xilin Wu, Molly Sophia, Marijan Limov and the Renegade Project
+  contributors), as carried by edk2-exynos, the Exynos fork of edk2-msm (J0SH1X
+  and the edk2-msm contributors). The fake Linux kernel header and the
+  relocating copy of the firmware to its load address are theirs; the interrupt
+  masking, watchdog stop, cache disable and diagnostic breadcrumbs were added
+  here. The bootshim is part of every published UEFI image. BSD-2-Clause
+  (license text below). edk2-exynos was also the reference for this firmware's
+  load address and firmware-volume size (Star2LtePkg.dsc and .fdf).
+
+WOA-Project — Lumia950XLPkg (https://github.com/WOA-Project/Lumia950XLPkg) and
+mu_andromeda_platforms (https://github.com/WOA-Project/mu_andromeda_platforms)
+  Ben (Bingxing) Wang (imbushuo), Gustave Monce (gus33000), the DuoWoA authors
+  and the WOA-Project contributors. BSD-2-Clause.
+  - firmware/Platform/Star2LtePkg/Star2LtePkg.dsc and Star2LtePkg.fdf follow the
+    structure of these PrePi-based Windows-on-ARM phone ports (a combined
+    SEC+PEI that hands off to the DXE core, then BDS).
+  - Patching the Windows boot path from UEFI before it runs (the
+    KernelErrataPatcherLib approach behind MuCntfrqKep.c) comes from
+    mu_andromeda_platforms, which built it on Samuel Tulach's rainbow
+    (https://github.com/SamuelTulach/rainbow).
+  - More broadly, WOA-Project's Windows-on-ARM phone work, which much of this
+    project builds on.
+
+The Linux kernel and the mainline Exynos 9810 / star2lte support
+  Hardware bring-up knowledge (clocks, regulators, pinctrl, device tree) comes
+  from the mainline Linux port of the Galaxy S9. GPL-2.0.
+
+postmarketOS
+  The postmarketOS community's star2lte work and documentation were an
+  invaluable reference for booting a mainline stack on this device.
+
+TheMorc (Richard Gráčik) — S6SY761Touch (https://github.com/TheMorc/S6SY761Touch)
+  drivers/S6SY761Touch/ is derived from TheMorc's S6SY761Touch Windows driver
+  (Richard Gráčik, with Gustave Monce and TAOcroatia), GPL-2.0, adapted here for
+  the Galaxy S9+ (its HSI2C bus and touch-report handling). His driver is built
+  on Microsoft's vhidmini2 KMDF sample (Windows-driver-samples, Copyright (c)
+  Microsoft Corporation, Microsoft Public License, see
+  drivers/Exynos9810Hsi2c/MS-PL.txt), began as a fork of Gustave Monce's
+  nt36xxx_win (https://github.com/edk2-porting/nt36xxx_win, MIT), and ports the
+  Linux sec_ts / s6sy761 driver by Andi Shyti and Samsung Electronics (GPL-2.0).
+  The original copyright and license notices are retained in that subtree.
+
+Microsoft Windows-driver-samples — SkeletonI2C
+  The WDF/SpbCx framework scaffolding of drivers/Exynos9810Hsi2c/ comes from the
+  spb/SkeletonI2C sample (https://github.com/microsoft/Windows-driver-samples).
+  Those portions are Copyright (c) Microsoft Corporation and are used under the
+  Microsoft Public License, included as drivers/Exynos9810Hsi2c/MS-PL.txt. The
+  Exynos HSI2C engine itself is original work.
+
+TWRP (Team Win Recovery Project)
+  The recovery used to stage and write the Windows image on the device. TWRP is
+  GPL-3.0 (https://github.com/TeamWin/android_bootable_recovery) and the kernel
+  inside it is Samsung's GPL-2.0 Linux kernel. The installer re-skins the
+  official twrp-3.7.0_9-0-star2lte.img from twrp.me on the user's PC into a
+  Windows-Recovery-Environment look (tools/twrp-winre and
+  installer/.../Twrp/WinReTwrpBuilder.cs). The releases also carry one such build,
+  star2lte-winre-recovery.img, made from that official image with the open fonts
+  below and the built-in gears. Every change is in this repository: the theme XML,
+  the reskin rules (tools/twrp-winre/theme/reskin.xml), the /sbin helper scripts,
+  the four-byte kernel patch that routes power-off (PowerOffRoutePatch.cs) and all
+  artwork, which is original: every stock TWRP bitmap is replaced at build time by
+  an original drawing of the same name and size (tools/twrp-winre/assets), so no
+  TeamWin bitmap is committed or shipped in the built image. The four kernel
+  modules baked into the recovery (rwd1_ack, rwd1_evidence_reader, rwd1_clear_poc,
+  pram_smp_clear_poc) are our own GPL-2.0 code, with sources under
+  tools/twrp-winre/modules/. The unmodified parts come from TeamWin's sources
+  (https://github.com/TeamWin) and Samsung's SM-G965F kernel source
+  (https://opensource.samsung.com); we will provide the corresponding source of
+  the published recovery on request.
+
+7-Zip LZMA SDK — Igor Pavlov
+  installer/src/S9Woa.Installer.Core/Twrp/Lzma/ vendors the managed LZMA SDK,
+  which its author placed in the public domain, so the installer can read and
+  rewrite the recovery ramdisk (an "LZMA alone" stream) with no native
+  dependency. Used verbatim except for the namespace and warning-suppression
+  headers noted in that folder's README.
+
+Segoe UI (Microsoft)
+  The WinRE-look recovery the installer builds uses Segoe UI, which is copied from
+  the *builder's own* %WINDIR%\Fonts at build time and written into that machine's
+  recovery image. No Segoe font file is committed to this repository or
+  redistributed with it; the recovery in the releases uses the open fonts below.
+
+Selawik (Microsoft) — SIL Open Font License 1.1
+  tools/twrp-winre/fonts/winre-*.ttf, the fonts of the published recovery, are
+  compiled from Microsoft's open-source Selawik (https://github.com/microsoft/Selawik)
+  by tools/twrp-winre/fonts/make_fonts.py. Copyright 2015 Microsoft Corporation, with
+  Reserved Font Name Selawik; as Modified Versions they are renamed "S9WoA Sans".
+  The license is tools/twrp-winre/fonts/OFL.txt and travels with the fonts.
+
+UpdateOS gear animation (Microsoft)
+  Optionally, the recovery shows Microsoft's UpdateOS rotating gears. The GIF is
+  supplied by the user (for example in their build folder) and, like the fonts,
+  is read only at build time on their own PC: its frames are rendered into that
+  machine's recovery image and nowhere else. Neither the GIF nor any frame derived
+  from it is committed to this repository or redistributed; without it, the
+  recovery uses the original procedurally drawn gears in tools/twrp-winre.
+
+Heimdall (https://github.com/Benjamin-Dobell/Heimdall, MIT) and
+Thor (https://github.com/Samsung-Loki/Thor)
+  The built-in Download-mode flasher implements Samsung's protocol as these
+  projects document it. No code is copied from them.
+
+tiny11builder (https://github.com/ntdevlabs/tiny11builder)
+  The Lite profile follows the tiny11builder approach to trimming a Windows
+  image; the Core profile follows its tiny11Coremaker.ps1 (package, Edge,
+  OneDrive and WinRE removal, component store trim, registry defaults).
+
+Microsoft
+  Windows, the Windows App SDK and WinUI 3. Windows media is provided by the
+  user or downloaded from Microsoft; no Windows files are redistributed here. The
+  installer packages in the releases are self-contained: they include the .NET
+  runtime (MIT) and the Windows App SDK runtime, redistributed under their own
+  license terms, which ship with them in licenses\.
+
+Trademarks (Samsung, Galaxy, Exynos, Windows, Microsoft, and others) belong to
+their respective owners and are used only to identify the hardware and software
+this project targets. This project is not affiliated with or endorsed by any of
+them.
+
+
+License texts
+=============
+
+BSD-2-Clause — edk2-msm (firmware/tools/bootshim/bootshim.S; in every UEFI image)
+---------------------------------------------------------------------------------
+
+Copyright (c) Andrei Warkentin. All rights reserved.
+Copyright (c) Apple Inc. All rights reserved.
+Copyright (c) ARM Limited. All rights reserved.
+Copyright (c) Bingxing Wang. All rights reserved.
+Copyright (c) DuoWoA authors. All rights reserved.
+Copyright (c) Intel Corporation. All rights reserved.
+Copyright (c) Linaro Limited. All rights reserved.
+Copyright (c) Microsoft Corporation. All rights reserved.
+Copyright (c) Red Hat, Inc. All rights reserved.
+Copyright (c) Renegade Project. All rights reserved.
+Copyright (c) Samuel Tulach. All rights reserved.
+Copyright (c) The Android Open Source Project. All rights reserved.
+Copyright (c) The Linux Foundation. All rights reserved.
+Copyright (c) The EFIDroid Project. All rights reserved.
+Copyright (c) Travis Geiselbrecht. All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+* Redistributions of source code must retain the above copyright
+  notice, this list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright
+  notice, this list of conditions and the following disclaimer in
+  the documentation and/or other materials provided with the
+  distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+MIT — Mu-Silicium CNTFRQ_EL0 shellcode and kernel errata patcher
+(firmware/Platform/Star2LtePkg/Library/PlatformBootManagerLib/MuCntfrqKep.c)
+----------------------------------------------------------------------------
+
+Copyright (c) 2021 Samuel Tulach
+Copyright (c) 2022-2023 DuoWoA authors
+Copyright (c) 2026 Project Silicium
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

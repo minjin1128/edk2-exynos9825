@@ -1,0 +1,850 @@
+{
+  "schema": 1,
+  "baseline": "SEC68 final phone platform/wrapper dev2",
+  "purpose": "Selected source extraction, not a replay of private research history. Source-only publication; rebuilt artifacts need their own validation.",
+  "copied_sources": [
+    {
+      "path": "N976nPlatformPkg/Applications/N976nBootTest/BootInfo.txt",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Applications/N976nBootTest/BootInfo.txt",
+      "sha256": "2806a612ab9f6d82d6fa41eb7929c7e1d05d027ba1e1c811ba337174f6df3557",
+      "copied_without_byte_changes": true,
+      "public_sha256": "2806a612ab9f6d82d6fa41eb7929c7e1d05d027ba1e1c811ba337174f6df3557"
+    },
+    {
+      "path": "N976nPlatformPkg/Applications/N976nBootTest/N976nBootTest.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Applications/N976nBootTest/N976nBootTest.c",
+      "sha256": "558625a2efb3eec65897ff529f79e9466c7c83a00dc39434d4d6865954d79fdc",
+      "copied_without_byte_changes": true,
+      "public_sha256": "558625a2efb3eec65897ff529f79e9466c7c83a00dc39434d4d6865954d79fdc"
+    },
+    {
+      "path": "N976nPlatformPkg/Applications/N976nBootTest/N976nBootTest.inf",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Applications/N976nBootTest/N976nBootTest.inf",
+      "sha256": "46e217237e6f311ae0d636e7327867f5f5abd30eecb00efd161a301644f405f8",
+      "copied_without_byte_changes": true,
+      "public_sha256": "46e217237e6f311ae0d636e7327867f5f5abd30eecb00efd161a301644f405f8"
+    },
+    {
+      "path": "N976nPlatformPkg/Drivers/N976nBootMediaDxe/N976nBootMedia.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Drivers/N976nBootMediaDxe/N976nBootMedia.c",
+      "sha256": "cbcf0756a7c8bd50269442e5d1a9f1816f2bc4f92b244f51ba134e8d94cee5ad",
+      "copied_without_byte_changes": true,
+      "public_sha256": "cbcf0756a7c8bd50269442e5d1a9f1816f2bc4f92b244f51ba134e8d94cee5ad"
+    },
+    {
+      "path": "N976nPlatformPkg/Drivers/N976nBootMediaDxe/N976nBootMediaDxe.inf",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Drivers/N976nBootMediaDxe/N976nBootMediaDxe.inf",
+      "sha256": "312f075912dfab420635e2692658dddc207bc7aabbe8eea507158525b774f4d1",
+      "copied_without_byte_changes": true,
+      "public_sha256": "312f075912dfab420635e2692658dddc207bc7aabbe8eea507158525b774f4d1"
+    },
+    {
+      "path": "N976nPlatformPkg/Drivers/N976nGopDxe/N976nGop.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Drivers/N976nGopDxe/N976nGop.c",
+      "sha256": "f1a53a7e93cdc3fd5b247e6c11cce90cf7314a08bb77a84db8cb592a0f3634e9",
+      "copied_without_byte_changes": true,
+      "public_sha256": "f1a53a7e93cdc3fd5b247e6c11cce90cf7314a08bb77a84db8cb592a0f3634e9"
+    },
+    {
+      "path": "N976nPlatformPkg/Drivers/N976nGopDxe/N976nGopDxe.inf",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Drivers/N976nGopDxe/N976nGopDxe.inf",
+      "sha256": "e88a989ae88c3b93cc058372672fdbb7a1adfa1bdd730bbd99f6836738621e11",
+      "copied_without_byte_changes": true,
+      "public_sha256": "e88a989ae88c3b93cc058372672fdbb7a1adfa1bdd730bbd99f6836738621e11"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/LegacyMemory/DxeProbe.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/LegacyMemory/DxeProbe.h",
+      "sha256": "1c157daaa247bd111a636c1ddc8a5c9f708d92236c5e25fd79b52c8a72429eb1",
+      "copied_without_byte_changes": true,
+      "public_sha256": "1c157daaa247bd111a636c1ddc8a5c9f708d92236c5e25fd79b52c8a72429eb1"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/LegacyMemory/MemoryPlan.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/LegacyMemory/MemoryPlan.h",
+      "sha256": "96ca377feec67a7556da9642bc6a7ef48d27896a73dd840906815e95d9506168",
+      "copied_without_byte_changes": true,
+      "public_sha256": "96ca377feec67a7556da9642bc6a7ef48d27896a73dd840906815e95d9506168"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/LegacyMemory/TranslationProbe.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/LegacyMemory/TranslationProbe.h",
+      "sha256": "33afef416cb4197e9b349cc44389468b3ff99b237380d451cf485f2c4b364733",
+      "copied_without_byte_changes": true,
+      "public_sha256": "33afef416cb4197e9b349cc44389468b3ff99b237380d451cf485f2c4b364733"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/Library/N976nBootstrapPolicy.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/Library/N976nBootstrapPolicy.h",
+      "sha256": "c4a91687aa69b1a84b3158f9ecb6699289d9f6aa94bdbf12edfec78ba4f7b534",
+      "copied_without_byte_changes": true,
+      "public_sha256": "c4a91687aa69b1a84b3158f9ecb6699289d9f6aa94bdbf12edfec78ba4f7b534"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nAcpiAdmission.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nAcpiAdmission.h",
+      "sha256": "0ff5d3b4ab236e90d87105dec035778d0113efe3bd2a98ce364fbf3a7a7676d2",
+      "copied_without_byte_changes": true,
+      "public_sha256": "0ff5d3b4ab236e90d87105dec035778d0113efe3bd2a98ce364fbf3a7a7676d2"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nAcpiPlatform.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nAcpiPlatform.h",
+      "sha256": "9149c13d0371866e36536251c6728abda74f00c1987b3fc13a50585484511ae3",
+      "copied_without_byte_changes": true,
+      "public_sha256": "9149c13d0371866e36536251c6728abda74f00c1987b3fc13a50585484511ae3"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nBootFiles.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nBootFiles.h",
+      "sha256": "9b68f4bdab7b0c9a64af54e3322531c0e6819bcdd2e5bc29859d4a7adda8e9c7",
+      "copied_without_byte_changes": true,
+      "public_sha256": "9b68f4bdab7b0c9a64af54e3322531c0e6819bcdd2e5bc29859d4a7adda8e9c7"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nBootMedia.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nBootMedia.h",
+      "sha256": "dc8c6b63d2ae13f37e5ef7ef5b50e4e0616cba169782b5b0d4f3dc31f8f7d4d4",
+      "copied_without_byte_changes": true,
+      "public_sha256": "dc8c6b63d2ae13f37e5ef7ef5b50e4e0616cba169782b5b0d4f3dc31f8f7d4d4"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nFramebuffer.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nFramebuffer.h",
+      "sha256": "868096b86faa5e3ebecea8c0a65ab106e7630dfcb3986dc5fd8f81e5653dce7a",
+      "copied_without_byte_changes": true,
+      "public_sha256": "868096b86faa5e3ebecea8c0a65ab106e7630dfcb3986dc5fd8f81e5653dce7a"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nGpt.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nGpt.h",
+      "sha256": "03bf5f30e3f0d21e0e8ce45bbd3b29554328ec90c9f4360d3654c24c58e31dcc",
+      "copied_without_byte_changes": true,
+      "public_sha256": "03bf5f30e3f0d21e0e8ce45bbd3b29554328ec90c9f4360d3654c24c58e31dcc"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nHandoffMemory.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nHandoffMemory.h",
+      "sha256": "62fef299480ed3cee5f00d66dbc29a4b1514042d3f2cc059d5797992affb1e8b",
+      "copied_without_byte_changes": true,
+      "public_sha256": "62fef299480ed3cee5f00d66dbc29a4b1514042d3f2cc059d5797992affb1e8b"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nHighRam.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nHighRam.h",
+      "sha256": "03817c28413612d381f3b24852a95350ed69cd226ad853233869538c3e3c88e3",
+      "copied_without_byte_changes": true,
+      "public_sha256": "03817c28413612d381f3b24852a95350ed69cd226ad853233869538c3e3c88e3"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nHighRamAdmission.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nHighRamAdmission.h",
+      "sha256": "8a9b12254e736cc786a239ae6fd2f6973afceb520b4de89f8e86f3eb647156c7",
+      "copied_without_byte_changes": true,
+      "public_sha256": "8a9b12254e736cc786a239ae6fd2f6973afceb520b4de89f8e86f3eb647156c7"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nOsHandoff.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nOsHandoff.h",
+      "sha256": "76181ecf4a4bf3410f923c210e39a92a4a0f506711282ecd60bcad4b68dec3c7",
+      "copied_without_byte_changes": true,
+      "public_sha256": "76181ecf4a4bf3410f923c210e39a92a4a0f506711282ecd60bcad4b68dec3c7"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nPhone.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nPhone.h",
+      "sha256": "e69757e0dfdb187157accc18e04b720f8c7fce33142676dfac9ea246263e5f76",
+      "copied_without_byte_changes": true,
+      "public_sha256": "e69757e0dfdb187157accc18e04b720f8c7fce33142676dfac9ea246263e5f76"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nPlatform.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nPlatform.h",
+      "sha256": "f2954a6bafbd169b12eb42d2b7186d827b0b39ac466276223004ec9e117ec320",
+      "copied_without_byte_changes": true,
+      "public_sha256": "f2954a6bafbd169b12eb42d2b7186d827b0b39ac466276223004ec9e117ec320"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nPowerOff.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nPowerOff.h",
+      "sha256": "0eefb1ca29d893de40fee976243a9f09c4d4c5bc61a5771d725b945d9b5446b1",
+      "copied_without_byte_changes": true,
+      "public_sha256": "0eefb1ca29d893de40fee976243a9f09c4d4c5bc61a5771d725b945d9b5446b1"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nSystemProbe.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nSystemProbe.h",
+      "sha256": "ec93d2bc4ce7079d27ca033fdeefc08820fdfd4985292fbd2ce9f7806c0928cf",
+      "copied_without_byte_changes": true,
+      "public_sha256": "ec93d2bc4ce7079d27ca033fdeefc08820fdfd4985292fbd2ce9f7806c0928cf"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nSystemVolume.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nSystemVolume.h",
+      "sha256": "b5595b61aeb59236d2ad8394d82562b35cb79fa4daa635cd562da40c2612a507",
+      "copied_without_byte_changes": true,
+      "public_sha256": "b5595b61aeb59236d2ad8394d82562b35cb79fa4daa635cd562da40c2612a507"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nSystemVolumeFixture.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nSystemVolumeFixture.h",
+      "sha256": "44735685087a6522456bb082d70b6fc4ebcd594d8eda71aa1d57262b4ca0733b",
+      "copied_without_byte_changes": true,
+      "public_sha256": "44735685087a6522456bb082d70b6fc4ebcd594d8eda71aa1d57262b4ca0733b"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nUfs.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nUfs.h",
+      "sha256": "90f48d095b9294f93746cb49ed6851ee779231653b1ad8e172b820fe4e6aa414",
+      "copied_without_byte_changes": true,
+      "public_sha256": "90f48d095b9294f93746cb49ed6851ee779231653b1ad8e172b820fe4e6aa414"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nUfsAdmission.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nUfsAdmission.h",
+      "sha256": "cf88cb49a9258e4444cb73aee2ef862b178e91326171405445659e720aea5662",
+      "copied_without_byte_changes": true,
+      "public_sha256": "cf88cb49a9258e4444cb73aee2ef862b178e91326171405445659e720aea5662"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nUfsBlock.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nUfsBlock.h",
+      "sha256": "e689d11986d6c58c0e33372b547220552447b538243091b9e1224c81a2d69052",
+      "copied_without_byte_changes": true,
+      "public_sha256": "e689d11986d6c58c0e33372b547220552447b538243091b9e1224c81a2d69052"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nUfsDiag.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nUfsDiag.h",
+      "sha256": "9f45672da7326dbce4778a9a4758f63b1c92d9ec828b3c1cfff3c8ed653a5484",
+      "copied_without_byte_changes": true,
+      "public_sha256": "9f45672da7326dbce4778a9a4758f63b1c92d9ec828b3c1cfff3c8ed653a5484"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nUfsFileSystem.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nUfsFileSystem.h",
+      "sha256": "80296dc9b5889d66342b6a5c792ff3afaa2bf1d47373456be0609629b5d2fd95",
+      "copied_without_byte_changes": true,
+      "public_sha256": "80296dc9b5889d66342b6a5c792ff3afaa2bf1d47373456be0609629b5d2fd95"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nUfsImage.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nUfsImage.h",
+      "sha256": "7ff4d4b0f2f99be7561dd50045add287da833b3013f869bcfea85b2024d19a2a",
+      "copied_without_byte_changes": true,
+      "public_sha256": "7ff4d4b0f2f99be7561dd50045add287da833b3013f869bcfea85b2024d19a2a"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nUfsService.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nUfsService.h",
+      "sha256": "710a2c1e24697660d283c32dd1b9476211f4a6d0eb4e524bad1fac23259e1bb0",
+      "copied_without_byte_changes": true,
+      "public_sha256": "710a2c1e24697660d283c32dd1b9476211f4a6d0eb4e524bad1fac23259e1bb0"
+    },
+    {
+      "path": "N976nPlatformPkg/Include/N976nWindowsBoot.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Include/N976nWindowsBoot.h",
+      "sha256": "ec20953efe41e8a913833df62d3b080e3910ba7137c986d4d652fe11a9c0da4c",
+      "copied_without_byte_changes": true,
+      "public_sha256": "ec20953efe41e8a913833df62d3b080e3910ba7137c986d4d652fe11a9c0da4c"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/BootstrapImagePolicyLib/BootstrapImagePolicy.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/BootstrapImagePolicyLib/BootstrapImagePolicy.c",
+      "sha256": "e14226bb27d4e40c8ca27d3742b7d068566127a209a75054a9ec10f9aa105cf7",
+      "copied_without_byte_changes": true,
+      "public_sha256": "e14226bb27d4e40c8ca27d3742b7d068566127a209a75054a9ec10f9aa105cf7"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/BootstrapImagePolicyLib/DxeBootstrapImagePolicyLib.inf",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/BootstrapImagePolicyLib/DxeBootstrapImagePolicyLib.inf",
+      "sha256": "48b9061c32f26bb37ecf480ee773696330e218c3e6f0b93627fb207e06058f0b",
+      "copied_without_byte_changes": true,
+      "public_sha256": "48b9061c32f26bb37ecf480ee773696330e218c3e6f0b93627fb207e06058f0b"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/BootstrapImagePolicyLib/SecBootstrapImagePolicyLib.inf",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/BootstrapImagePolicyLib/SecBootstrapImagePolicyLib.inf",
+      "sha256": "1670e0431f0d9bc6ef1ec5ab7bb34bb82d0e06b6c46a793bb19f59ec1d8ed4b7",
+      "copied_without_byte_changes": true,
+      "public_sha256": "1670e0431f0d9bc6ef1ec5ab7bb34bb82d0e06b6c46a793bb19f59ec1d8ed4b7"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/AcpiBspDsdt.asl",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/AcpiBspDsdt.asl",
+      "sha256": "d07bb978c234ab6d007354e190f598e2eafb5957b65e02ea61f8aef1f494af1f",
+      "copied_without_byte_changes": true,
+      "public_sha256": "d07bb978c234ab6d007354e190f598e2eafb5957b65e02ea61f8aef1f494af1f"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/AcpiBspDsdt.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/AcpiBspDsdt.h",
+      "sha256": "87ba47e103a85313b99a2293964d0ed76b5ce50200025d4904b79f719b110602",
+      "copied_without_byte_changes": true,
+      "public_sha256": "87ba47e103a85313b99a2293964d0ed76b5ce50200025d4904b79f719b110602"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/AcpiInstall.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/AcpiInstall.c",
+      "sha256": "06534b87f1728a934ca00c2d29ca4480540f35232c617963f92f9d2d88a49de4",
+      "copied_without_byte_changes": true,
+      "public_sha256": "06534b87f1728a934ca00c2d29ca4480540f35232c617963f92f9d2d88a49de4"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/AcpiPlatform.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/AcpiPlatform.c",
+      "sha256": "094c638d4a30503507a53ed010173e8b9ff24a35a629e394e42f5637aa497d89",
+      "copied_without_byte_changes": true,
+      "public_sha256": "094c638d4a30503507a53ed010173e8b9ff24a35a629e394e42f5637aa497d89"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/BootFiles.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/BootFiles.c",
+      "sha256": "9fd4bdd49ad43d57eb7b08e74e055e10479f5c2e5ecedc95f27ec75e0f3efcc3",
+      "copied_without_byte_changes": true,
+      "public_sha256": "9fd4bdd49ad43d57eb7b08e74e055e10479f5c2e5ecedc95f27ec75e0f3efcc3"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/GptProbe.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/GptProbe.c",
+      "sha256": "7802a2b86dc2d78ccabc57f3243dbe4fa6a99c9bef4c013b1ac9da476ca3086b",
+      "copied_without_byte_changes": true,
+      "public_sha256": "7802a2b86dc2d78ccabc57f3243dbe4fa6a99c9bef4c013b1ac9da476ca3086b"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/HandoffMemory.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/HandoffMemory.c",
+      "sha256": "5d86e938a13cb3304c72b9101d2eef27b208e4ba7c9a66a5b89e77dce69b4ced",
+      "copied_without_byte_changes": true,
+      "public_sha256": "5d86e938a13cb3304c72b9101d2eef27b208e4ba7c9a66a5b89e77dce69b4ced"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/HighRamProbe.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/HighRamProbe.c",
+      "sha256": "e9926268603df53cd147905aa0b579c637b46465f873603b54078c35336aeca9",
+      "copied_without_byte_changes": true,
+      "public_sha256": "e9926268603df53cd147905aa0b579c637b46465f873603b54078c35336aeca9"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/HighRamStage.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/HighRamStage.c",
+      "sha256": "fa22b5440877b225f2003d6b1afe623d7afc2476038d977a2c7cc80861f3a5e5",
+      "copied_without_byte_changes": true,
+      "public_sha256": "fa22b5440877b225f2003d6b1afe623d7afc2476038d977a2c7cc80861f3a5e5"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/OsHandoff.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/OsHandoff.c",
+      "sha256": "f41365ccd05f2324911511aa16018ee357f13ca533c184d226aeea875b25ce4c",
+      "copied_without_byte_changes": true,
+      "public_sha256": "f41365ccd05f2324911511aa16018ee357f13ca533c184d226aeea875b25ce4c"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/PlatformBootManager.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/PlatformBootManager.c",
+      "sha256": "beaf73455af6c6869d49780526c6bdd9519389639466551b215e05f280f8eb35",
+      "copied_without_byte_changes": true,
+      "public_sha256": "beaf73455af6c6869d49780526c6bdd9519389639466551b215e05f280f8eb35"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/PlatformBootManagerLib.inf",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/PlatformBootManagerLib.inf",
+      "sha256": "03e8b3c51a16beaca9fb77a01af8b0ece869b55fd77d125afa0e3515480d9212",
+      "copied_without_byte_changes": true,
+      "public_sha256": "03e8b3c51a16beaca9fb77a01af8b0ece869b55fd77d125afa0e3515480d9212"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/PowerOff.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/PowerOff.c",
+      "sha256": "df1e2068ac578539238e4849636ccb7bc627e361578d46a81d8c9f124c401ed0",
+      "copied_without_byte_changes": true,
+      "public_sha256": "df1e2068ac578539238e4849636ccb7bc627e361578d46a81d8c9f124c401ed0"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/SystemProbe.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/SystemProbe.c",
+      "sha256": "6177ed00fda4ca60d168af45ddcd1fe614102e268ddcb2f7ef44402f321641d0",
+      "copied_without_byte_changes": true,
+      "public_sha256": "6177ed00fda4ca60d168af45ddcd1fe614102e268ddcb2f7ef44402f321641d0"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/SystemSha256.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/SystemSha256.c",
+      "sha256": "a62e79a9b316c20f1da6034493df747b684d15a3cc58ff460be2fbfc22ae3719",
+      "copied_without_byte_changes": true,
+      "public_sha256": "a62e79a9b316c20f1da6034493df747b684d15a3cc58ff460be2fbfc22ae3719"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/SystemVolume.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/SystemVolume.c",
+      "sha256": "f46baee49fe0d65119b82dfe05149f9e13e0a9d691e04d816cd351ec6497bdcc",
+      "copied_without_byte_changes": true,
+      "public_sha256": "f46baee49fe0d65119b82dfe05149f9e13e0a9d691e04d816cd351ec6497bdcc"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/SystemVolumeFixture.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/SystemVolumeFixture.c",
+      "sha256": "3d5a57f2cd64df018a1b6dfa841caf4aa7960a0ad658e00dd8be9b67c55775d6",
+      "copied_without_byte_changes": true,
+      "public_sha256": "3d5a57f2cd64df018a1b6dfa841caf4aa7960a0ad658e00dd8be9b67c55775d6"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UfsBlockProbe.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UfsBlockProbe.c",
+      "sha256": "35d327dc131cf487da828f549393a154ef654694aa96f522b613360885986ab5",
+      "copied_without_byte_changes": true,
+      "public_sha256": "35d327dc131cf487da828f549393a154ef654694aa96f522b613360885986ab5"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UfsDmaMapping.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UfsDmaMapping.h",
+      "sha256": "59b1a7c3f5bec3c34f9f1f1b5f74a5c8d1e3a6c02b115c73004174866a7571ba",
+      "copied_without_byte_changes": true,
+      "public_sha256": "59b1a7c3f5bec3c34f9f1f1b5f74a5c8d1e3a6c02b115c73004174866a7571ba"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UfsFileFixture.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UfsFileFixture.c",
+      "sha256": "f478bb321864f4152d4bf4e54c38be5f76b20daa329da70d98ea1ebe72da61fb",
+      "copied_without_byte_changes": true,
+      "public_sha256": "f478bb321864f4152d4bf4e54c38be5f76b20daa329da70d98ea1ebe72da61fb"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UfsFileSystem.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UfsFileSystem.c",
+      "sha256": "988d423b4cdfed5eccbb8c3ed72038176e7ce48f6521a193fc9b40c78191cb89",
+      "copied_without_byte_changes": true,
+      "public_sha256": "988d423b4cdfed5eccbb8c3ed72038176e7ce48f6521a193fc9b40c78191cb89"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UfsImage.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UfsImage.c",
+      "sha256": "e204a4447cc91f75e1f1ac559dce37d4804f8719bbc4507a11b0b09b0119bad5",
+      "copied_without_byte_changes": true,
+      "public_sha256": "e204a4447cc91f75e1f1ac559dce37d4804f8719bbc4507a11b0b09b0119bad5"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UfsProbe.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UfsProbe.c",
+      "sha256": "08ecad0567add443400dd8f61bf090f0f4d24fb3a150c598d35bb7219f4ab3c5",
+      "copied_without_byte_changes": true,
+      "public_sha256": "08ecad0567add443400dd8f61bf090f0f4d24fb3a150c598d35bb7219f4ab3c5"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UfsService.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UfsService.c",
+      "sha256": "72a41c53a2bb649a339f8e56edfa6fba3cf53cd28d05ee07b2db3afe93278b9a",
+      "copied_without_byte_changes": true,
+      "public_sha256": "72a41c53a2bb649a339f8e56edfa6fba3cf53cd28d05ee07b2db3afe93278b9a"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamDiskIo/ComponentName.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamDiskIo/ComponentName.c",
+      "sha256": "043324b8ea563fabfe3860c5cd9526c7561bf75c5c13bfb526279ec711eab69b",
+      "copied_without_byte_changes": true,
+      "public_sha256": "043324b8ea563fabfe3860c5cd9526c7561bf75c5c13bfb526279ec711eab69b"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamDiskIo/DiskIo.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamDiskIo/DiskIo.c",
+      "sha256": "807d7a87734c1a39c0065c0582c235406844a3d32c8b3e9172b1267ead3b3d4e",
+      "copied_without_byte_changes": true,
+      "public_sha256": "807d7a87734c1a39c0065c0582c235406844a3d32c8b3e9172b1267ead3b3d4e"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamDiskIo/DiskIo.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamDiskIo/DiskIo.h",
+      "sha256": "579b6ddacb5322f79610c0414809f5490359d88b7e856a8bbe92652871ced576",
+      "copied_without_byte_changes": true,
+      "public_sha256": "579b6ddacb5322f79610c0414809f5490359d88b7e856a8bbe92652871ced576"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamFat/Fat.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamFat/Fat.h",
+      "sha256": "15add26f4a19dd115cd09090cd9669c98536608a9bf73ecf065fec8e826f2643",
+      "copied_without_byte_changes": true,
+      "public_sha256": "15add26f4a19dd115cd09090cd9669c98536608a9bf73ecf065fec8e826f2643"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamFat/FatFileSystem.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamFat/FatFileSystem.h",
+      "sha256": "07a9d23e108ef0499452a86eb031bd908fb2a8fbb428cf9b06e995e73ec229c8",
+      "copied_without_byte_changes": true,
+      "public_sha256": "07a9d23e108ef0499452a86eb031bd908fb2a8fbb428cf9b06e995e73ec229c8"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/LICENSE",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/LICENSE",
+      "sha256": "9b405ef4c89342f5eae1dd828882f931747f71001cfba7d114801039b52ad09b",
+      "copied_without_byte_changes": true,
+      "public_sha256": "9b405ef4c89342f5eae1dd828882f931747f71001cfba7d114801039b52ad09b"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/SystemShaConfig.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/SystemShaConfig.h",
+      "sha256": "196a5af8549493cb9ad3b4f0faca75e9b0f0aa0a367c73a8b7045addd7c1709e",
+      "copied_without_byte_changes": true,
+      "public_sha256": "196a5af8549493cb9ad3b4f0faca75e9b0f0aa0a367c73a8b7045addd7c1709e"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/mbedtls/build_info.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/mbedtls/build_info.h",
+      "sha256": "9b599075b04e8d4629a9617bced2ff726a0b9407b6f343e01a32c86ea52a8998",
+      "copied_without_byte_changes": true,
+      "public_sha256": "9b599075b04e8d4629a9617bced2ff726a0b9407b6f343e01a32c86ea52a8998"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/mbedtls/check_config.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/mbedtls/check_config.h",
+      "sha256": "66696df9cc3f7cbbe84786046937242b18140963b94c34347404f7827c428efa",
+      "copied_without_byte_changes": true,
+      "public_sha256": "66696df9cc3f7cbbe84786046937242b18140963b94c34347404f7827c428efa"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/mbedtls/config_adjust_legacy_crypto.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/mbedtls/config_adjust_legacy_crypto.h",
+      "sha256": "f404960e2878c21c22a5d67caba6cd1d29f382b3d913a56ce856931dd15b2886",
+      "copied_without_byte_changes": true,
+      "public_sha256": "f404960e2878c21c22a5d67caba6cd1d29f382b3d913a56ce856931dd15b2886"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/mbedtls/config_adjust_ssl.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/mbedtls/config_adjust_ssl.h",
+      "sha256": "2d37a7552566e9fbd8a5a8b3e6cf6d4e21125a5e48a7e24ca30f3c683d141871",
+      "copied_without_byte_changes": true,
+      "public_sha256": "2d37a7552566e9fbd8a5a8b3e6cf6d4e21125a5e48a7e24ca30f3c683d141871"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/mbedtls/config_adjust_x509.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/mbedtls/config_adjust_x509.h",
+      "sha256": "92909d91c59340f13eb2b447cf44e0075a0ee742a18f22fb7843f6a18c5af5dc",
+      "copied_without_byte_changes": true,
+      "public_sha256": "92909d91c59340f13eb2b447cf44e0075a0ee742a18f22fb7843f6a18c5af5dc"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/mbedtls/error.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/mbedtls/error.h",
+      "sha256": "ddcb14c1bf9d6fd2f2f1d2eb62117ce9bf05a0f9430c6931d7555b23f9ed3ddb",
+      "copied_without_byte_changes": true,
+      "public_sha256": "ddcb14c1bf9d6fd2f2f1d2eb62117ce9bf05a0f9430c6931d7555b23f9ed3ddb"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/mbedtls/platform.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/mbedtls/platform.h",
+      "sha256": "e6e1edc99d90698acf751d5d837c9b59898d7277deb993bcbf7473172b7a3523",
+      "copied_without_byte_changes": true,
+      "public_sha256": "e6e1edc99d90698acf751d5d837c9b59898d7277deb993bcbf7473172b7a3523"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/mbedtls/platform_util.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/mbedtls/platform_util.h",
+      "sha256": "1237d849e96bc15b479e8086160e4568c1de86563bb51c60eead45b99ad1b4ac",
+      "copied_without_byte_changes": true,
+      "public_sha256": "1237d849e96bc15b479e8086160e4568c1de86563bb51c60eead45b99ad1b4ac"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/mbedtls/private_access.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/mbedtls/private_access.h",
+      "sha256": "c897213b3e534e8d5db83629177f9c01d90461ed6fea57906836262dba87056d",
+      "copied_without_byte_changes": true,
+      "public_sha256": "c897213b3e534e8d5db83629177f9c01d90461ed6fea57906836262dba87056d"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/mbedtls/sha256.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include/mbedtls/sha256.h",
+      "sha256": "a2ee050ca15b7598a8d227cac0e0ec9fd6c38615b817737a8007e90b3feab0d9",
+      "copied_without_byte_changes": true,
+      "public_sha256": "a2ee050ca15b7598a8d227cac0e0ec9fd6c38615b817737a8007e90b3feab0d9"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/library/alignment.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/library/alignment.h",
+      "sha256": "76979a482c57089aecd8c2370474f19ce983fe9dad2e99925a1645364b44d0a1",
+      "copied_without_byte_changes": true,
+      "public_sha256": "76979a482c57089aecd8c2370474f19ce983fe9dad2e99925a1645364b44d0a1"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/library/common.h",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/library/common.h",
+      "sha256": "adfd493f8ecb11f87f7e75f270a97cbd05d1902345ef32db51d39c076e4f8fde",
+      "copied_without_byte_changes": true,
+      "public_sha256": "adfd493f8ecb11f87f7e75f270a97cbd05d1902345ef32db51d39c076e4f8fde"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/library/sha256.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/library/sha256.c",
+      "sha256": "632672d0c954d8bc0e20fdc8370c9f1725f3ffc5fcdaacc14949e42a1b5424d7",
+      "copied_without_byte_changes": true,
+      "public_sha256": "632672d0c954d8bc0e20fdc8370c9f1725f3ffc5fcdaacc14949e42a1b5424d7"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/PlatformBootManagerLib/WindowsBoot.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/PlatformBootManagerLib/WindowsBoot.c",
+      "sha256": "e36758852d7a7e07ba5aa2889b8de294f92cb66d0fb4cc950bc3679e4295b659",
+      "copied_without_byte_changes": true,
+      "public_sha256": "e36758852d7a7e07ba5aa2889b8de294f92cb66d0fb4cc950bc3679e4295b659"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/SecHobListPointerLib/HobPointer.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/SecHobListPointerLib/HobPointer.c",
+      "sha256": "95591f7f3df1120cb6520f4a98165cec24de0da3987363e9835ea7f26656a003",
+      "copied_without_byte_changes": true,
+      "public_sha256": "95591f7f3df1120cb6520f4a98165cec24de0da3987363e9835ea7f26656a003"
+    },
+    {
+      "path": "N976nPlatformPkg/Library/SecHobListPointerLib/SecHobListPointerLib.inf",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Library/SecHobListPointerLib/SecHobListPointerLib.inf",
+      "sha256": "3eb3327698b5201837b9ef5a06a286105556a2e93dc65a529f5af9643b9da8eb",
+      "copied_without_byte_changes": true,
+      "public_sha256": "3eb3327698b5201837b9ef5a06a286105556a2e93dc65a529f5af9643b9da8eb"
+    },
+    {
+      "path": "N976nPlatformPkg/N976nPlatformPkg.dec",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/N976nPlatformPkg.dec",
+      "sha256": "c3c47880a42a859953e702bfe01ea36bb7058a123128dff688bbdf38db44706c",
+      "copied_without_byte_changes": true,
+      "public_sha256": "c3c47880a42a859953e702bfe01ea36bb7058a123128dff688bbdf38db44706c"
+    },
+    {
+      "path": "N976nPlatformPkg/N976nPlatformPkg.dsc",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/N976nPlatformPkg.dsc",
+      "sha256": "c08140722344183e6cda446b07b8846e199dfe4dbed12b57945d54f4faea6a8d",
+      "copied_without_byte_changes": true,
+      "public_sha256": "c08140722344183e6cda446b07b8846e199dfe4dbed12b57945d54f4faea6a8d"
+    },
+    {
+      "path": "N976nPlatformPkg/N976nPlatformPkg.fdf",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/N976nPlatformPkg.fdf",
+      "sha256": "128369a383b1184e0140dac342ee22015cb598b0354d9a2ae1509e8cb4cd0e98",
+      "copied_without_byte_changes": true,
+      "public_sha256": "128369a383b1184e0140dac342ee22015cb598b0354d9a2ae1509e8cb4cd0e98"
+    },
+    {
+      "path": "N976nPlatformPkg/README.md",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/README.md",
+      "sha256": "f8f8a2aaf1e8098eda20ca9f082635f3e6482b4fe5642d93d280bb42965c989f",
+      "copied_without_byte_changes": false,
+      "public_sha256": "7d50e00fe055b95b4e28334769e5a311a299174789df4faa71471a52a9af1cd4"
+    },
+    {
+      "path": "N976nPlatformPkg/Sec/AcpiAdmission.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Sec/AcpiAdmission.c",
+      "sha256": "125f0156343f44e6767db23d1e2517d95a44b10ca0815c6aea318c97ddd23ff6",
+      "copied_without_byte_changes": true,
+      "public_sha256": "125f0156343f44e6767db23d1e2517d95a44b10ca0815c6aea318c97ddd23ff6"
+    },
+    {
+      "path": "N976nPlatformPkg/Sec/DisplayGate.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Sec/DisplayGate.c",
+      "sha256": "5665f2cb820a635525574bd078ed6e84c46c298d5de94404ea2506bf5bfccb7c",
+      "copied_without_byte_changes": true,
+      "public_sha256": "5665f2cb820a635525574bd078ed6e84c46c298d5de94404ea2506bf5bfccb7c"
+    },
+    {
+      "path": "N976nPlatformPkg/Sec/HighRamAdmission.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Sec/HighRamAdmission.c",
+      "sha256": "f12cad7440bd2bba9b5b840d567f07fdd84b196986d26aa858a05096d5aed1ce",
+      "copied_without_byte_changes": true,
+      "public_sha256": "f12cad7440bd2bba9b5b840d567f07fdd84b196986d26aa858a05096d5aed1ce"
+    },
+    {
+      "path": "N976nPlatformPkg/Sec/LegacyMemory/MemoryPlan.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Sec/LegacyMemory/MemoryPlan.c",
+      "sha256": "37f4d1e70a111d70ddddbc3b116dbef7f64602a1d0cd36c808534bebca669933",
+      "copied_without_byte_changes": true,
+      "public_sha256": "37f4d1e70a111d70ddddbc3b116dbef7f64602a1d0cd36c808534bebca669933"
+    },
+    {
+      "path": "N976nPlatformPkg/Sec/LegacyMemory/README.md",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Sec/LegacyMemory/README.md",
+      "sha256": "778e66d187665dd2b0508a10f2e94a14e27e4fa930c2dbb2b170c2e9f727aaa1",
+      "copied_without_byte_changes": true,
+      "public_sha256": "778e66d187665dd2b0508a10f2e94a14e27e4fa930c2dbb2b170c2e9f727aaa1"
+    },
+    {
+      "path": "N976nPlatformPkg/Sec/N976nPhoneSec.inf",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Sec/N976nPhoneSec.inf",
+      "sha256": "1920e5dd99f0dd7c9b052a1f5c76576f71e716600cdae1b0462efef3badcbd92",
+      "copied_without_byte_changes": true,
+      "public_sha256": "1920e5dd99f0dd7c9b052a1f5c76576f71e716600cdae1b0462efef3badcbd92"
+    },
+    {
+      "path": "N976nPlatformPkg/Sec/N976nQemuSec.inf",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Sec/N976nQemuSec.inf",
+      "sha256": "c84468c703ada80b5f960528e603690e9b29ff3f75b2a0ea3bc6d017261da519",
+      "copied_without_byte_changes": true,
+      "public_sha256": "c84468c703ada80b5f960528e603690e9b29ff3f75b2a0ea3bc6d017261da519"
+    },
+    {
+      "path": "N976nPlatformPkg/Sec/PhoneSec.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Sec/PhoneSec.c",
+      "sha256": "cd892e21a9434ade60f15f12e2e16032fe64d2f1d6a5dc796d2889d3d523bfdc",
+      "copied_without_byte_changes": true,
+      "public_sha256": "cd892e21a9434ade60f15f12e2e16032fe64d2f1d6a5dc796d2889d3d523bfdc"
+    },
+    {
+      "path": "N976nPlatformPkg/Sec/PowerAdmission.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Sec/PowerAdmission.c",
+      "sha256": "4aec4f0acdf0d28f1663c827e5c8de752f553901b14d8ded1d3865c856ca637b",
+      "copied_without_byte_changes": true,
+      "public_sha256": "4aec4f0acdf0d28f1663c827e5c8de752f553901b14d8ded1d3865c856ca637b"
+    },
+    {
+      "path": "N976nPlatformPkg/Sec/QemuSec.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Sec/QemuSec.c",
+      "sha256": "f16365cd85d3ba53f30d9da21c98157d6c4279bb8d49e9d5b6d101b8b9cd8b8c",
+      "copied_without_byte_changes": true,
+      "public_sha256": "f16365cd85d3ba53f30d9da21c98157d6c4279bb8d49e9d5b6d101b8b9cd8b8c"
+    },
+    {
+      "path": "N976nPlatformPkg/Sec/UfsAdmission.c",
+      "original_path": "n976n-bringup/edk2/sec68/N976nPlatformPkg/Sec/UfsAdmission.c",
+      "sha256": "508c62ebeeda2dc171fea8f7cf8cbaab6ebc3289f8be752ae60ec8ef0aead8c5",
+      "copied_without_byte_changes": true,
+      "public_sha256": "508c62ebeeda2dc171fea8f7cf8cbaab6ebc3289f8be752ae60ec8ef0aead8c5"
+    },
+    {
+      "path": "entry/sec68_start.S",
+      "original_path": "n976n-bringup/probe/sec68_start.S",
+      "sha256": "eb278ad6f31721ae0bade2ff88a4834b0af6b302a3f6494226243f82c0643306",
+      "copied_without_byte_changes": true,
+      "public_sha256": "eb278ad6f31721ae0bade2ff88a4834b0af6b302a3f6494226243f82c0643306"
+    },
+    {
+      "path": "entry/sec68_loader.c",
+      "original_path": "n976n-bringup/probe/sec68_loader.c",
+      "sha256": "eb102516b67b1c43363603fc377570cc3b1bcf410d11d9daf01698fa0f6c4b28",
+      "copied_without_byte_changes": true,
+      "public_sha256": "eb102516b67b1c43363603fc377570cc3b1bcf410d11d9daf01698fa0f6c4b28"
+    },
+    {
+      "path": "entry/sec68.ld",
+      "original_path": "n976n-bringup/probe/sec68.ld",
+      "sha256": "f35560041c6087ad320085c5d82d4139872d5b0966b83ddcc22467a2e17d9492",
+      "copied_without_byte_changes": true,
+      "public_sha256": "f35560041c6087ad320085c5d82d4139872d5b0966b83ddcc22467a2e17d9492"
+    },
+    {
+      "path": "entry/sec68_framebuffer.inc",
+      "original_path": "n976n-bringup/probe/sec68_framebuffer.inc",
+      "sha256": "6271676c7896327f63d80e29e09a518f8fb0555bf54f23824c5ff4f872097313",
+      "copied_without_byte_changes": true,
+      "public_sha256": "6271676c7896327f63d80e29e09a518f8fb0555bf54f23824c5ff4f872097313"
+    },
+    {
+      "path": "tools/boot_media.py",
+      "original_path": "n976n-bringup/edk2/sec68/boot_media.py",
+      "sha256": "ececdfa9180713db230514d34aa731e0781984d7bd31482ab1063fde7978062e",
+      "copied_without_byte_changes": false,
+      "public_sha256": "2b30e91f10398896c94c567b0fcda9630fe6d0ee174635ef96c066113626a5a8"
+    },
+    {
+      "path": "tools/runtime_files.py",
+      "original_path": "n976n-bringup/edk2/sec68/runtime_files.py",
+      "sha256": "fbe767c9e6ad5c70decc85e16292051d9b3c8d9dbb972e3b310641e102c06453",
+      "copied_without_byte_changes": true,
+      "public_sha256": "fbe767c9e6ad5c70decc85e16292051d9b3c8d9dbb972e3b310641e102c06453"
+    },
+    {
+      "path": "patches/code_allocation_nx.py",
+      "original_path": "n976n-bringup/edk2/sec68/patches/code_allocation_nx.py",
+      "sha256": "2a1c2f08784c61aab5afee86f8b884645065113180f2076f44f19abddd52ad5f",
+      "copied_without_byte_changes": true,
+      "public_sha256": "2a1c2f08784c61aab5afee86f8b884645065113180f2076f44f19abddd52ad5f"
+    },
+    {
+      "path": "tools/ram_scratch.py",
+      "original_path": "tools/ram_scratch.py",
+      "sha256": "df9d869e9f3727174ea536b0e786eb7a3b7d30c15f5b5ef179a3382608c7a8a3",
+      "copied_without_byte_changes": true,
+      "public_sha256": "df9d869e9f3727174ea536b0e786eb7a3b7d30c15f5b5ef179a3382608c7a8a3"
+    },
+    {
+      "path": "tools/ram_bootstrap/sitecustomize.py",
+      "original_path": "tools/ram_bootstrap/sitecustomize.py",
+      "sha256": "943b40c47476dae10aec59d4dfbd4c2d6905720364cd3df4e5c67340f6807db3",
+      "copied_without_byte_changes": true,
+      "public_sha256": "943b40c47476dae10aec59d4dfbd4c2d6905720364cd3df4e5c67340f6807db3"
+    },
+    {
+      "path": "tools/elf.py",
+      "original_path": "n976n-bringup/probe/sec41_fix5_elf.py",
+      "sha256": "02bdac9145d29834d90c19beae2eec577f91b33d0c90b20c7c6db34c3d8f2d0c",
+      "copied_without_byte_changes": true,
+      "public_sha256": "02bdac9145d29834d90c19beae2eec577f91b33d0c90b20c7c6db34c3d8f2d0c"
+    },
+    {
+      "path": "tools/pack_boot.py",
+      "original_path": "n976n-bringup/pack_probe.py",
+      "sha256": "9ae97a5b809713719c21316be0f56af3ff103cae6c544197fbd65a8aff286cdf",
+      "copied_without_byte_changes": false,
+      "public_sha256": "5e9fe47a99ecca0e95f0d9a4663be7f779b978532895f7468c83e52c3510325a"
+    },
+    {
+      "path": "LICENSES/NTDEV-BSD-2-Clause-Patent.txt",
+      "original_path": "n976n-bringup/references/ntdev-exynos9810-6e2cacf15f6b/LICENSE",
+      "sha256": "9c995a961395a9b86edc123f3e25999f20b534f124ad17b2561c7313e3e82aae",
+      "copied_without_byte_changes": true,
+      "public_sha256": "9c995a961395a9b86edc123f3e25999f20b534f124ad17b2561c7313e3e82aae"
+    },
+    {
+      "path": "LICENSES/NTDEV-NOTICE.txt",
+      "original_path": "n976n-bringup/references/ntdev-exynos9810-6e2cacf15f6b/NOTICE",
+      "sha256": "7a4f2e57d3f9e5d3ab500ff7388591af6f418229acdf995d7358e00a0761d50e",
+      "copied_without_byte_changes": true,
+      "public_sha256": "7a4f2e57d3f9e5d3ab500ff7388591af6f418229acdf995d7358e00a0761d50e"
+    },
+    {
+      "path": "LICENSES/EDK2.txt",
+      "original_path": "n976n-bringup/references/edk2/License.txt",
+      "sha256": "50ce20c9cfdb0e19ee34fe0a51fc0afe961f743697b068359ab2f862b494df80",
+      "copied_without_byte_changes": true,
+      "public_sha256": "50ce20c9cfdb0e19ee34fe0a51fc0afe961f743697b068359ab2f862b494df80"
+    }
+  ],
+  "pure_function_extractions": [
+    {
+      "public_path": "tools/pe.py",
+      "original_path": "probe/build_sec_probe.py",
+      "functions": [
+        "prepare_pe"
+      ]
+    },
+    {
+      "public_path": "tools/ram_stage.py",
+      "original_path": "edk2/sec41-fix5/build_dxe.py",
+      "functions": [
+        "run",
+        "orb",
+        "check_ram_stage",
+        "stream_tree"
+      ]
+    },
+    {
+      "public_path": "tools/fv_readers.py",
+      "original_path": "probe/test_sec41_fix5.py",
+      "functions": [
+        "align",
+        "u24",
+        "inspect_pe32",
+        "inspect_dir64",
+        "inspect_fv"
+      ]
+    },
+    {
+      "public_path": "tools/fv_readers.py",
+      "original_path": "probe/test_sec42_fv.py",
+      "functions": [
+        "inspect_depex",
+        "repair_ffs"
+      ]
+    }
+  ],
+  "host_adaptations": [
+    "Public directory layout and explicit external inputs",
+    "Pinned small input contract replaces private receipt traversal without changing generated firmware inputs",
+    "New unique owned Orb tmpfs stage; existing build stages untouched",
+    "Independent public source/build/static-test provenance; no inherited hardware-qualified flag",
+    "Android boot template explicit and exact identity checked"
+  ]
+}

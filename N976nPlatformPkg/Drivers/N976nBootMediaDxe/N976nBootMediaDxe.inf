@@ -1,0 +1,31 @@
+## SPDX-License-Identifier: MIT
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = N976nBootMediaDxe
+  FILE_GUID = 6e5c45af-ef14-4637-a71b-e2815d9b4501
+  MODULE_TYPE = DXE_DRIVER
+  VERSION_STRING = 0.1
+  ENTRY_POINT = N976nBootMediaEntry
+[Sources]
+  N976nBootMedia.c
+[Packages]
+  MdePkg/MdePkg.dec
+  N976nPlatformPkg/N976nPlatformPkg.dec
+[LibraryClasses]
+  UefiDriverEntryPoint
+  BaseMemoryLib
+  DxeServicesLib
+  HobLib
+  MemoryAllocationLib
+  UefiBootServicesTableLib
+[Guids]
+  gN976nPlatformHandoffGuid
+  gN976nBootMediaFileGuid
+[Protocols]
+  gEfiBlockIoProtocolGuid
+  gEfiDevicePathProtocolGuid
+  gEfiMemoryAttributeProtocolGuid
+  gEfiFirmwareVolume2ProtocolGuid
+  gN976nBootMediaProtocolGuid
+[Depex]
+  gEfiMemoryAttributeProtocolGuid AND gEfiFirmwareVolume2ProtocolGuid

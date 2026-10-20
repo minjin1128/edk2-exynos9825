@@ -1,0 +1,112 @@
+## SPDX-License-Identifier: MIT
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = N976nPlatformBootManagerLib
+  FILE_GUID = c09bd8c8-4db0-410b-8e28-c68eea5e2077
+  MODULE_TYPE = DXE_DRIVER
+  LIBRARY_CLASS = PlatformBootManagerLib|DXE_DRIVER
+
+[Sources]
+  PlatformBootManager.c
+  SystemProbe.c
+  SystemVolume.c
+  SystemSha256.c
+  SystemVolumeFixture.c
+  PowerOff.c
+  HighRamProbe.c
+  HighRamStage.c
+  BootFiles.c
+  WindowsBoot.c
+  OsHandoff.c
+  AcpiPlatform.c
+  AcpiInstall.c
+  HandoffMemory.c
+  UfsProbe.c
+  GptProbe.c
+  UfsBlockProbe.c
+  UfsService.c
+  UfsImage.c
+  UfsFileSystem.c
+  UfsFileFixture.c
+  UpstreamDiskIo/ComponentName.c
+
+[Packages]
+  ArmPkg/ArmPkg.dec
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  UefiCpuPkg/UefiCpuPkg.dec
+  N976nPlatformPkg/N976nPlatformPkg.dec
+
+[LibraryClasses]
+  ArmLib
+  ArmMmuLib
+  ArmMonitorLib
+  BaseLib
+  BaseMemoryLib
+  CacheMaintenanceLib
+  DebugLib
+  DevicePathLib
+  DxeServicesTableLib
+  HobLib
+  IoLib
+  MemoryAllocationLib
+  PcdLib
+  SemihostLib
+  TimerLib
+  UefiBootManagerLib
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  UefiLib
+
+[Guids]
+  gN976nPlatformHandoffGuid
+  gN976nUfsAdmissionGuid
+  gN976nHighRamAdmissionGuid
+  gN976nPowerAdmissionGuid
+  gN976nAcpiAdmissionGuid
+  gEfiEventBeforeExitBootServicesGuid
+  gEfiEventExitBootServicesGuid
+  gEventExitBootServicesFailedGuid
+  gEfiAcpi20TableGuid
+  gEfiFileInfoGuid
+  gN976nBootMediaFileGuid
+  gEfiEndOfDxeEventGroupGuid
+
+[Protocols]
+  gEfiBlockIoProtocolGuid
+  gEfiBlockIo2ProtocolGuid
+  gEfiDiskIoProtocolGuid
+  gEfiDiskIo2ProtocolGuid
+  gEfiDriverBindingProtocolGuid
+  gEfiFirmwareVolume2ProtocolGuid
+  gEfiSimpleFileSystemProtocolGuid
+  gEfiSecurityArchProtocolGuid
+  gEfiCpuArchProtocolGuid
+  gEfiMetronomeArchProtocolGuid
+  gEfiTimerArchProtocolGuid
+  gEfiBdsArchProtocolGuid
+  gEfiWatchdogTimerArchProtocolGuid
+  gEfiRuntimeArchProtocolGuid
+  gEfiVariableArchProtocolGuid
+  gEfiVariableWriteArchProtocolGuid
+  gEfiCapsuleArchProtocolGuid
+  gEfiMonotonicCounterArchProtocolGuid
+  gEfiResetArchProtocolGuid
+  gEfiRealTimeClockArchProtocolGuid
+  gEfiMemoryAttributeProtocolGuid
+  gEfiLoadedImageProtocolGuid
+  gEfiGraphicsOutputProtocolGuid
+  gEfiDevicePathProtocolGuid
+  gEfiSimpleTextOutProtocolGuid
+  gEfiResetNotificationProtocolGuid
+  gEfiAcpiTableProtocolGuid
+  gN976nBootMediaProtocolGuid
+  gEfiDxeSmmReadyToLockProtocolGuid
+
+[Pcd]
+  gEfiMdeModulePkgTokenSpaceGuid.PcdDiskIoDataBufferBlockNum
+  gN976nPlatformTokenSpaceGuid.PcdN976nPlatformProfile
+  gN976nPlatformTokenSpaceGuid.PcdN976nUfsQueryExperiment
+
+[BuildOptions]
+  CLANGPDB:*_*_AARCH64_CC_FLAGS = -I$(WORKSPACE)/CryptoPkg/Library/Include -I$(WORKSPACE)/../N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include

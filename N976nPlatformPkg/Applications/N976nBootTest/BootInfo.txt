@@ -1,0 +1,3 @@
+N976N SEC66
+Read-only firmware boot files
+Standard EFI application
