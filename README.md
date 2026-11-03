@@ -11,6 +11,12 @@ the host tools have been separated from historical build paths and reports.
 
 ## Status
 
+The table describes the published **SEC68** snapshot. Later research has reached
+a Full Windows desktop with four CPUs and touch responses, with intermittent
+input stalls and storage performance work still open. Those later sources and
+their private deployment environment are not included here; see the dated
+[research progress note](docs/PROGRESS.md) for the observation limits.
+
 | Area | Scope |
 | --- | --- |
 | UEFI / display | EDK2 DXE/BDS, inherited framebuffer GOP and console |
