@@ -1,0 +1,150 @@
+## SPDX-License-Identifier: MIT
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = N976nPlatformBootManagerLib
+  FILE_GUID = c09bd8c8-4db0-410b-8e28-c68eea5e2077
+  MODULE_TYPE = DXE_DRIVER
+  LIBRARY_CLASS = PlatformBootManagerLib|DXE_DRIVER
+
+[Sources]
+  PlatformBootManager.c
+  A55Probe.c
+  A55Clock.c
+  A55Entry.S
+  TouchReport.c
+  AcpmReport.c
+  SystemProbe.c
+  SystemVolume.c
+  SystemSha256.c
+  SystemVolumeFixture.c
+  PowerOff.c
+  RuntimePowerHandoff.c
+  HighRamProbe.c
+  HighRamStage.c
+  BootFiles.c
+  WindowsBoot.c
+  EbsCheckpoint.c
+  OsHandoff.c
+  TouchLease.c
+  AcpiPlatform.c
+  AcpiInstall.c
+  UartDbg2.c
+  UartKd.c
+  UartMux.c
+  BatteryCodec.c
+  BatteryBus.c
+  BatteryProbe.c
+  AdcPreflight.c
+  AdcConversion.c
+  AdcHandoff.c
+  BatterySnapshot.c
+  BatteryLiveBus.c
+  BatteryLiveLease.c
+  BatteryLive.c
+  UartDiag.c
+  HandoffMemory.c
+  UfsWindowsLease.c
+  UfsProbe.c
+  GptProbe.c
+  N976nGptVolumeView.c
+  UfsBlockProbe.c
+  UfsService.c
+  UfsImage.c
+  UfsFileSystem.c
+  UfsFileFixture.c
+  UpstreamDiskIo/ComponentName.c
+
+[Packages]
+  EmbeddedPkg/EmbeddedPkg.dec
+  ArmPkg/ArmPkg.dec
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  UefiCpuPkg/UefiCpuPkg.dec
+  N976nPlatformPkg/N976nPlatformPkg.dec
+
+[LibraryClasses]
+  ArmLib
+  ArmMmuLib
+  ArmMonitorLib
+  BaseLib
+  BaseMemoryLib
+  CacheMaintenanceLib
+  DebugLib
+  DevicePathLib
+  DxeServicesTableLib
+  HobLib
+  IoLib
+  MemoryAllocationLib
+  PcdLib
+  SemihostLib
+  TimerLib
+  UefiBootManagerLib
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  UefiLib
+
+[Guids]
+  gN976nAdcPreflightGuid
+  gN976nThermalAdmissionGuid
+  gN976nChargeObservationGuid
+  gN976nBatteryAdmissionGuid
+  gEfiPartTypeSystemPartGuid
+  gN976nUartAdmissionGuid
+  gN976nFramebufferHobGuid
+  gN976nTouchLeaseGuid
+  gN976nPlatformHandoffGuid
+  gN976nUfsAdmissionGuid
+  gN976nHighRamAdmissionGuid
+  gN976nPowerAdmissionGuid
+  gN976nAcpiAdmissionGuid
+  gN976nTouchSnapshotGuid
+  gN976nAcpmSnapshotGuid
+  gEfiEventBeforeExitBootServicesGuid
+  gEfiEventExitBootServicesGuid
+  gEventExitBootServicesFailedGuid
+  gEfiAcpi20TableGuid
+  gEfiFileInfoGuid
+  gN976nBootMediaFileGuid
+  gEfiEndOfDxeEventGroupGuid
+
+[Protocols]
+  gHardwareInterruptProtocolGuid
+  gN976nRuntimePowerReadyGuid
+  gEfiPartitionInfoProtocolGuid
+  gEfiBlockIoProtocolGuid
+  gEfiBlockIo2ProtocolGuid
+  gEfiDiskIoProtocolGuid
+  gEfiDiskIo2ProtocolGuid
+  gEfiDriverBindingProtocolGuid
+  gEfiFirmwareVolume2ProtocolGuid
+  gEfiSimpleFileSystemProtocolGuid
+  gEfiSecurityArchProtocolGuid
+  gEfiCpuArchProtocolGuid
+  gEfiMetronomeArchProtocolGuid
+  gEfiTimerArchProtocolGuid
+  gEfiBdsArchProtocolGuid
+  gEfiWatchdogTimerArchProtocolGuid
+  gEfiRuntimeArchProtocolGuid
+  gEfiVariableArchProtocolGuid
+  gEfiVariableWriteArchProtocolGuid
+  gEfiCapsuleArchProtocolGuid
+  gEfiMonotonicCounterArchProtocolGuid
+  gEfiResetArchProtocolGuid
+  gEfiRealTimeClockArchProtocolGuid
+  gEfiMemoryAttributeProtocolGuid
+  gEfiLoadedImageProtocolGuid
+  gEfiGraphicsOutputProtocolGuid
+  gEfiDevicePathProtocolGuid
+  gEfiSimpleTextOutProtocolGuid
+  gEfiResetNotificationProtocolGuid
+  gEfiAcpiTableProtocolGuid
+  gN976nBootMediaProtocolGuid
+  gEfiDxeSmmReadyToLockProtocolGuid
+
+[Pcd]
+  gEfiMdeModulePkgTokenSpaceGuid.PcdDiskIoDataBufferBlockNum
+  gN976nPlatformTokenSpaceGuid.PcdN976nPlatformProfile
+  gN976nPlatformTokenSpaceGuid.PcdN976nUfsQueryExperiment
+
+[BuildOptions]
+  CLANGPDB:*_*_AARCH64_CC_FLAGS = -I$(WORKSPACE)/CryptoPkg/Library/Include -I$(WORKSPACE)/../N976nPlatformPkg/Library/PlatformBootManagerLib/UpstreamSha256/include

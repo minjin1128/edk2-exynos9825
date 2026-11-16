@@ -1,0 +1,40 @@
+[Version]
+Signature="$WINDOWS NT$"
+Class=SCSIAdapter
+ClassGuid={4D36E97B-E325-11CE-BFC1-08002BE10318}
+Provider=%Provider%
+DriverVer=11/12/2026,0.89.2.5
+CatalogFile=n976nufs.cat
+PnpLockdown=1
+[Manufacturer]
+%Provider%=Models,NTARM64.10.0...19041
+[Models.NTARM64.10.0...19041]
+%Device%=Install,ACPI\NNUF0078
+[ControlFlags]
+ExcludeFromSelect=*
+[Install.NT]
+CopyFiles=Files
+[Install.NT.Services]
+AddService=N976nUfs,0x00000002,Service
+[Service]
+DisplayName=%Device%
+ServiceType=1
+; Required before mounting the installed Windows volume. Offline image
+; servicing installs this package; there is no WinPE app or drvload prerequisite.
+StartType=0
+ErrorControl=1
+ServiceBinary=%13%\N976nUfs.sys
+LoadOrderGroup=SCSI Miniport
+[Files]
+N976nUfs.sys
+[DestinationDirs]
+DefaultDestDir=13
+Files=13
+[SourceDisksNames]
+1=%Disk%,,,
+[SourceDisksFiles]
+N976nUfs.sys=1
+[Strings]
+Provider="N976N Research"
+Device="N976N SEC89 PERF5 PROD1 UFS boot disk (SYSTEM ESP and USERDATA)"
+Disk="N976N SEC89 PERF5 PROD1 development package"

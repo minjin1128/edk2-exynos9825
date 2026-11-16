@@ -4,18 +4,20 @@ Experimental ARM64 UEFI firmware for the **Samsung Galaxy Note10+ 5G, SM-N976N
 (Exynos 9825)**. The original SEC68 development candidate reached a **physical
 Windows PE desktop on 2026-10-20**.
 
-This repository contains one selected source snapshot, its build tools and
-design documentation. It has a fresh Git history and does not contain the
-private research archive. The firmware sources retain their original checks;
-the host tools have been separated from historical build paths and reports.
+This repository contains the independently documented SEC68 build snapshot and
+a newer [SEC89 source-only development snapshot](experimental/sec89-2026-11-16/README.md).
+The latter adds later UEFI, native Windows UFS/touch/battery and TRACE1 source,
+with its own provenance, original licenses and explicit missing dependencies.
+It is not integrated into the SEC68 build and does not contain private binaries
+or the research archive.
 
 ## Status
 
-The table describes the published **SEC68** snapshot. Later research has reached
-a Full Windows desktop with four CPUs and touch responses, with intermittent
-input stalls and storage performance work still open. Those later sources and
-their private deployment environment are not included here; see the dated
-[research progress note](docs/PROGRESS.md) for the observation limits.
+The table describes the supported root **SEC68** snapshot. The newer
+[SEC89 source tree](experimental/sec89-2026-11-16/README.md) separately preserves
+the current PROD1 baseline and the physically untested TRACE1 candidate. Later
+Full Windows/four-CPU/input observations and unresolved regressions are described
+in the dated [progress note](docs/PROGRESS.md).
 
 | Area | Scope |
 | --- | --- |
@@ -31,7 +33,7 @@ UEFI storage access is **not a Windows storage driver**. This is not a complete
 Windows installation, a universal Exynos port or a SystemReady compliance claim.
 The later touch diagnostic is not included in this SEC68 snapshot.
 
-## Build
+## Build the SEC68 root snapshot
 
 Start with [BUILDING.md](docs/BUILDING.md). The current build path is macOS with
 an existing OrbStack Ubuntu machine, using isolated RAM scratch/staging. The
@@ -53,7 +55,9 @@ private experiment receipts are not required.
 | [entry](entry/) | Android ARM64 Image entry, offline-mapped SEC PE and audited ELF wrapper |
 | [tools](tools/) | Pinned-input admission, isolated build, PE/ELF/FV checks and offline boot packaging |
 | [patches](patches/) | Exact-hash-guarded upstream overlay preserving non-executable code staging |
-| [tests](tests/) | Public input-contract and refusal-path tests |
+| [tests](tests/) | SEC68 public input-contract and refusal-path tests |
+| [SEC89 sources](experimental/sec89-2026-11-16/README.md) | Later development source snapshot, dependencies, omissions and licenses |
+| [UFS measurement notes](docs/UFS_MEASUREMENT_NOTES.md) | Timing boundaries, sampling limits and deferred concurrency lessons |
 | [ARCHITECTURE.md](docs/ARCHITECTURE.md) | Execution flow, trust boundaries and reference structure |
 
 ## Origins and licenses
@@ -63,7 +67,8 @@ with upstream [EDK2](https://github.com/tianocore/edk2/tree/870158586f14dbf9d57e
 and Mu-Silicium structure informing the N976N adaptation. Reference hardware
 behavior is not N976N hardware evidence.
 
-Original project code and documentation use [MIT](LICENSE). Files with other
-SPDX/copyright notices retain those licenses, including BSD-2-Clause-Patent
-EDK2 code and dual-licensed Mbed TLS. See [NOTICE](NOTICE) and
+Original SEC68 publication code/tools and documentation use [MIT](LICENSE).
+The later source snapshot retains its own [original license context](experimental/sec89-2026-11-16/LICENSES.md),
+including GPL, BSD-2-Clause-Patent, MIT and dual-licensed Mbed TLS notices.
+It is not blanket-relicensed as MIT. See [NOTICE](NOTICE) and
 [ORIGINS.md](docs/ORIGINS.md). No Microsoft or Samsung binary license is granted.

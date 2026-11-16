@@ -1,0 +1,25 @@
+## SPDX-License-Identifier: MIT
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = N976nBootTest
+  FILE_GUID = e656f212-16f9-42d7-a70b-7911482c4401
+  MODULE_TYPE = UEFI_APPLICATION
+  VERSION_STRING = 1.0
+  ENTRY_POINT = UefiMain
+
+[Sources]
+  N976nBootTest.c
+
+[Packages]
+  MdePkg/MdePkg.dec
+  N976nPlatformPkg/N976nPlatformPkg.dec
+
+[LibraryClasses]
+  BaseMemoryLib
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+
+[Protocols]
+  gEfiLoadedImageProtocolGuid
+  gEfiSimpleFileSystemProtocolGuid
+  gEfiMemoryAttributeProtocolGuid

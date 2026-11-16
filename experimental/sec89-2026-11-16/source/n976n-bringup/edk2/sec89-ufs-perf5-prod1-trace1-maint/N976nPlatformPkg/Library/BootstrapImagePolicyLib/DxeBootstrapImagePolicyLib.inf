@@ -1,0 +1,26 @@
+## SPDX-License-Identifier: MIT
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = DxeBootstrapImagePolicyLib
+  FILE_GUID = b145682c-0e7d-41dc-9409-9641014cfdc5
+  MODULE_TYPE = BASE
+  VERSION_STRING = 1.0
+  LIBRARY_CLASS = PeCoffExtraActionLib|DXE_CORE
+[Sources]
+  BootstrapImagePolicy.c
+[Packages]
+  MdePkg/MdePkg.dec
+  UefiCpuPkg/UefiCpuPkg.dec
+  N976nPlatformPkg/N976nPlatformPkg.dec
+[LibraryClasses]
+  BaseLib
+  BaseMemoryLib
+  CacheMaintenanceLib
+  ArmMmuLib
+  HobLib
+  DebugLib
+[BuildOptions]
+  *_*_*_CC_FLAGS = -DN976N_POLICY_DXE=1
+
+[Guids]
+  gN976nPlatformHandoffGuid

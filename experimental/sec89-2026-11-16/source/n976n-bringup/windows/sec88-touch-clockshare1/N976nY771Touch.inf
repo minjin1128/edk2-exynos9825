@@ -1,0 +1,86 @@
+; SEC88 TOUCH CLOCKSHARE1: exact read-only TOP resource shared with battery.
+;
+;
+;Copyright (c) Microsoft Corporation All rights Reserved
+;Copyright (C) Microsoft Corporation, All Rights Reserved.
+;
+;SPDX-Licence-Identifier: GPL-2.0
+;
+;Copyright (c) 2017  Samsung Electronics Co., Ltd.
+;Copyright (c) 2017  Andi Shyti <andi@etezian.org>
+;                    Andi Shyti <andi.shyti@samsung.com>
+;
+;Copyright (c) 2022 - 2023  Morc - Richard Gráčik
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=HIDClass
+ClassGuid={745A17A0-74D3-11D0-B6FE-00A0C90F57DA}
+Provider=%ProviderString%
+DriverVer = 11/04/2026,0.0.88.4
+CatalogFile=N976nY771Touch.cat
+PnpLockdown = 1
+
+[Manufacturer]
+%ManufacturerString%=Microsoft,NTarm64.10.0...16299
+
+[Microsoft.NTarm64.10.0...16299]
+%DeviceDesc%=N976nY771Touch, ACPI\NNTC0076
+
+[N976nY771Touch.NT]
+CopyFiles=KMDriverCopy
+
+[N976nY771Touch.NT.hw]
+AddReg=N976nY771Touch_AddReg
+
+[N976nY771Touch.NT.Services]
+AddService=N976nY771Touch,0x00000002,N976nY771Touch_Service_Inst
+
+[N976nY771Touch.NT.Wdf]
+KmdfService=N976nY771Touch,N976nY771Touch_Wdf
+
+[N976nY771Touch_Wdf]
+KmdfLibraryVersion=1.15
+
+
+[N976nY771Touch_AddReg]
+HKR,,"UpperFilters",    %REG_MULTI_SZ%, mshidkmdf
+HKR,,"MultiportDevice", %REG_DWORD%,    0
+HKR,,"XRevert",0x00010001,0
+HKR,,"YRevert",0x00010001,0
+HKR,,"XYExchange",0x00010001,0
+HKR,,"XMin",0x00010001,0
+HKR,,"XMax",0x00010001,4095
+HKR,,"YMin",0x00010001,0
+HKR,,"YMax",0x00010001,4095
+
+[N976nY771Touch_Service_Inst]
+DisplayName    = %ServiceDesc%
+ServiceType    = 1
+StartType      = 3
+ErrorControl   = 1
+ServiceBinary  = %13%\N976nY771Touch.sys
+
+[KMDriverCopy]
+N976nY771Touch.sys
+
+[SourceDisksNames]
+1=%DiskDesc%,,,
+
+[SourceDisksFiles]
+N976nY771Touch.sys=1
+
+[DestinationDirs]
+KMDriverCopy=13
+
+;---------------------------------------------------------------;
+
+[Strings]
+ProviderString     = "Morc - Richard Gráčik"
+ManufacturerString = "Samsung Electronics Co."
+DeviceDesc         = "N976N Y771 Touch Polling Demo Development Device"
+ServiceDesc        = "N976N Y771 Touch Polling Demo Development Service"
+DiskDesc           = "N976N Y771 Touch Polling Demo Sources"
+REG_MULTI_SZ            = 0x00010000
+REG_DWORD               = 0x00010001

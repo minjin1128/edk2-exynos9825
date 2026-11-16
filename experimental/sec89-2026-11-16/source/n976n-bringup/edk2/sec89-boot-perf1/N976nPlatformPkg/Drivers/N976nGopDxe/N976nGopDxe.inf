@@ -1,0 +1,26 @@
+## SPDX-License-Identifier: MIT
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = N976nGopDxe
+  FILE_GUID = c395b74e-f63c-49df-a46b-2da53a498e27
+  MODULE_TYPE = DXE_DRIVER
+  VERSION_STRING = 0.1
+  ENTRY_POINT = N976nGopEntry
+[Sources]
+  N976nGop.c
+[Packages]
+  MdePkg/MdePkg.dec
+  N976nPlatformPkg/N976nPlatformPkg.dec
+[LibraryClasses]
+  UefiDriverEntryPoint
+  BaseMemoryLib
+  HobLib
+  UefiBootServicesTableLib
+[Guids]
+  gN976nFramebufferHobGuid
+  gN976nPlatformHandoffGuid
+[Protocols]
+  gEfiCpuArchProtocolGuid
+  gEfiMemoryAttributeProtocolGuid
+[Depex]
+  gEfiCpuArchProtocolGuid AND gEfiMemoryAttributeProtocolGuid

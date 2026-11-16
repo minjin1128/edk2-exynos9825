@@ -1,5 +1,10 @@
 # Validation scope
 
+The existing validation below belongs to the original SEC68 extraction.
+For the later [SEC89 source publication](../experimental/sec89-2026-11-16/README.md),
+checks cover selected source bytes, omissions, notices and document links only.
+No new build, test execution, firmware run or hardware validation was performed.
+
 This source publication separates **the original hardware result** from
 **the new public extraction's host checks**. Machine-readable scope is in
 [validation.json](validation.json).

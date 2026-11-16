@@ -1,0 +1,36 @@
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = N976nQemuSec
+  FILE_GUID = 245b42f6-fdee-4614-bfbc-23c579764212
+  MODULE_TYPE = SEC
+  VERSION_STRING = 0.1
+  ENTRY_POINT = _ModuleEntryPoint
+[Sources]
+  QemuSec.c
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  EmbeddedPkg/EmbeddedPkg.dec
+  ArmPkg/ArmPkg.dec
+  UefiCpuPkg/UefiCpuPkg.dec
+  N976nPlatformPkg/N976nPlatformPkg.dec
+[LibraryClasses]
+  BaseLib
+  BaseMemoryLib
+  DebugLib
+  ArmLib
+  ArmMmuLib
+  CacheMaintenanceLib
+  HobLib
+  MemoryAllocationLib
+  PrePiLib
+  PrePiHobListPointerLib
+  ExtractGuidedSectionLib
+  PeCoffLib
+  PrintLib
+  SerialPortLib
+[Guids]
+  gN976nPlatformHandoffGuid
+[FixedPcd]
+  gN976nPlatformTokenSpaceGuid.PcdN976nPlatformProfile
+

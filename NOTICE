@@ -1,7 +1,7 @@
 edk2-exynos9825 — SM-N976N source snapshot
 =========================================
 
-Original N976N project source and public extraction tools: MIT (LICENSE).
+Original SEC68 publication source and public extraction tools: MIT (LICENSE).
 Files carrying a different SPDX identifier/copyright retain their terms.
 
 TianoCore EDK2 — pinned actual build dependency
@@ -37,3 +37,11 @@ adaptation. No proprietary Samsung/Lineage/Windows input files, fonts, FAT
 volumes, firmware images, phone backups or raw hardware photographs are
 redistributed. Names and trademarks identify the target and upstream work;
 this project is not affiliated with or endorsed by the named vendors.
+
+SEC89 source-only development publication (2026-11-16)
+experimental/sec89-2026-11-16/ retains selected original source and its per-file
+and directory licenses. The preceding MIT statement does not relicense this
+subtree. Original GPL directory licenses, BSD patent/NTDEV notices, MIT headers
+and Mbed TLS dual-license text remain alongside the relevant files. Consult
+the subtree LICENSES.md and manifest.json; no proprietary input or binary
+redistribution permission is granted.

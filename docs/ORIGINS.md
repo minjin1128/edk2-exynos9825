@@ -1,5 +1,9 @@
 # Origins and attribution
 
+The table and extraction notes below describe the original SEC68 publication.
+The later [SEC89 source-only snapshot](../experimental/sec89-2026-11-16/README.md)
+has a separate file-origin/byte manifest and original license context.
+
 This is a fresh, selected source publication of the SEC68 N976N platform. The
 original candidate reached a physical WinPE GUI on 2026-10-20. Its private Git
 history, personal conversations, build archives and raw hardware photographs

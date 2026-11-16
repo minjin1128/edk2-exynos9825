@@ -1,0 +1,15 @@
+/* SPDX-License-Identifier: MIT */
+#ifndef N976N_TOUCH_LEASE_H
+#define N976N_TOUCH_LEASE_H
+#include <N976nTouchHandoff.h>
+#include <N976nTouchProbe.h>
+#include <N976nAcpm.h>
+extern EFI_GUID gN976nTouchLeaseGuid;
+BOOLEAN EFIAPI N976nPrepareTouchWindows (CONST N976N_TOUCH_ADMISSION *, N976N_TOUCH_SNAPSHOT *, N976N_TOUCH_HANDOFF *);
+BOOLEAN EFIAPI N976nRetainTouchPowerAcpm (CONST N976N_ACPM_ADMISSION *, BOOLEAN, N976N_ACPM_TOUCH_PROBE, VOID *, N976N_ACPM_SNAPSHOT *);
+EFI_STATUS N976nTouchLeasePublish (UINT64 Profile);
+EFI_STATUS N976nTouchLeaseCheck (VOID);
+EFI_STATUS N976nTouchLeaseRelease (VOID);
+UINT64 N976nTouchLeaseAddress (VOID);
+UINT32 N976nTouchLeaseCrc (CONST N976N_TOUCH_HANDOFF *Lease);
+#endif

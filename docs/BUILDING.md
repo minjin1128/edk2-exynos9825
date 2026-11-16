@@ -1,5 +1,10 @@
 # Building the source snapshot
 
+The commands below build the SEC68 root snapshot. The separate
+[SEC89 source-only tree](../experimental/sec89-2026-11-16/README.md) is not
+integrated here; its historical helper graph and private generated inputs
+have not been exported as a standalone public build recipe.
+
 ## Supported workflow
 
 The tested host workflow is **macOS + an existing OrbStack Ubuntu machine**.

@@ -1,0 +1,36 @@
+## SPDX-License-Identifier: MIT
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = N976nResetSystemLib
+  FILE_GUID = 69ae1894-a642-4058-b04f-876f77658001
+  MODULE_TYPE = DXE_RUNTIME_DRIVER
+  VERSION_STRING = 1.0
+  LIBRARY_CLASS = ResetSystemLib|DXE_RUNTIME_DRIVER
+  CONSTRUCTOR = N976nResetSystemLibConstructor
+[Sources]
+  N976nResetSystemLib.c
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+  N976nPlatformPkg/N976nPlatformPkg.dec
+[LibraryClasses]
+  BaseLib
+  BaseMemoryLib
+  DxeServicesTableLib
+  HobLib
+  IoLib
+  PcdLib
+  TimerLib
+  UefiBootServicesTableLib
+  UefiRuntimeLib
+[Guids]
+  gN976nPowerAdmissionGuid
+  gN976nUfsAdmissionGuid
+  gN976nPlatformHandoffGuid
+[Protocols]
+  gN976nRuntimePowerReadyGuid
+  gEfiCpuArchProtocolGuid
+[Depex]
+  gEfiCpuArchProtocolGuid
+[Pcd]
+  gN976nPlatformTokenSpaceGuid.PcdN976nPlatformProfile

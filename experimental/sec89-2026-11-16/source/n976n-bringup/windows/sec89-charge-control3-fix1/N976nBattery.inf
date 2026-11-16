@@ -1,0 +1,43 @@
+; SPDX-License-Identifier: MIT
+; SEC89 CONTROL3 continuous 600mA / input900mA charging and BatteryClass observation candidate.
+[Version]
+Signature="$WINDOWS NT$"
+Class=Battery
+ClassGuid={72631e54-78a4-11d0-bcf7-00aa00b7b32a}
+Provider=%Provider%
+DriverVer=11/13/2026,0.89.0.606
+CatalogFile=N976nBattery.cat
+PnpLockdown=1
+[Manufacturer]
+%Provider%=N976N,NTarm64.10.0...19041
+[N976N.NTarm64.10.0...19041]
+%DeviceDesc%=BatteryDevice,ACPI\NNBT0089
+[BatteryDevice.NT]
+CopyFiles=DriverCopy
+Include=battery.inf
+Needs=Battery_Inst
+[BatteryDevice.NT.Services]
+AddService=N976nBattery,0x00000002,BatteryService
+[BatteryDevice.NT.Wdf]
+KmdfService=N976nBattery,BatteryWdf
+[BatteryWdf]
+KmdfLibraryVersion=1.15
+[BatteryService]
+DisplayName=%ServiceDesc%
+ServiceType=1
+StartType=3
+ErrorControl=1
+ServiceBinary=%13%\N976nBattery.sys
+[DriverCopy]
+N976nBattery.sys
+[DestinationDirs]
+DriverCopy=13
+[SourceDisksNames]
+1=%DiskDesc%,,,
+[SourceDisksFiles]
+N976nBattery.sys=1
+[Strings]
+Provider="N976N Development"
+DeviceDesc="N976N CONTROL3 supervised charging (development)"
+ServiceDesc="N976N Battery Miniclass"
+DiskDesc="N976N battery development driver"

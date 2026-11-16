@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations"><ProjectConfiguration Include="Release|ARM64"><Configuration>Release</Configuration><Platform>ARM64</Platform></ProjectConfiguration></ItemGroup>
+  <PropertyGroup Label="Globals"><ProjectGuid>{B7F95376-4DD8-4376-A176-000000000076}</ProjectGuid><ProjectName>N976nTouchDemo</ProjectName><WindowsTargetPlatformVersion>10.0.28000.0</WindowsTargetPlatformVersion></PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration"><ConfigurationType>Application</ConfigurationType><PlatformToolset>v145</PlatformToolset><UseDebugLibraries>false</UseDebugLibraries><CharacterSet>Unicode</CharacterSet></PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ItemDefinitionGroup>
+    <ClCompile><WarningLevel>Level4</WarningLevel><TreatWarningAsError>true</TreatWarningAsError><RuntimeLibrary>MultiThreaded</RuntimeLibrary><BufferSecurityCheck>true</BufferSecurityCheck><ControlFlowGuard>Guard</ControlFlowGuard><Optimization>MinSpace</Optimization><AdditionalOptions>/Brepro %(AdditionalOptions)</AdditionalOptions></ClCompile>
+    <Link><SubSystem>Windows</SubSystem><DataExecutionPrevention>true</DataExecutionPrevention><RandomizedBaseAddress>true</RandomizedBaseAddress><AdditionalDependencies>user32.lib;gdi32.lib;advapi32.lib;crypt32.lib;bcrypt.lib;cfgmgr32.lib;%(AdditionalDependencies)</AdditionalDependencies><AdditionalOptions>/Brepro /guard:cf %(AdditionalOptions)</AdditionalOptions></Link>
+  </ItemDefinitionGroup>
+  <ItemGroup><ClCompile Include="N976nTouchDemo.c" /><ClCompile Include="N976nStartup.c" /></ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+</Project>

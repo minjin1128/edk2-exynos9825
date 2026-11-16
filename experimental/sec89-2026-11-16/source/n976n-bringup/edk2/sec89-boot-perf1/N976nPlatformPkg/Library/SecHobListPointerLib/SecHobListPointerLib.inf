@@ -1,0 +1,13 @@
+[Defines]
+  INF_VERSION = 0x0001001B
+  BASE_NAME = N976nSecHobListPointerLib
+  FILE_GUID = f27a8b34-11da-4f33-8233-976642200001
+  MODULE_TYPE = BASE
+  VERSION_STRING = 0.1
+  LIBRARY_CLASS = PrePiHobListPointerLib|SEC
+[Sources]
+  HobPointer.c
+[Packages]
+  MdePkg/MdePkg.dec
+  EmbeddedPkg/EmbeddedPkg.dec
+
